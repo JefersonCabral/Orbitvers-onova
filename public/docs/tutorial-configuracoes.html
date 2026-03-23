@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações de Disparo - OrbitSender</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="tutorial-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-logo">
+                    <span>🚀</span>
+                    <span>OrbitSender</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-nav-section">
+                    <h3>Documentação</h3>
+                    <a href="index.html" class="sidebar-nav-link">
+                        <span class="icon">🏠</span>
+                        <span>Início</span>
+                    </a>
+                </div>
+                <div class="sidebar-nav-section">
+                    <h3>Tutoriais</h3>
+                    <a href="tutorial-cadastro.html" class="sidebar-nav-link">
+                        <span class="icon">📝</span>
+                        <span>Cadastro e Login</span>
+                    </a>
+                    <a href="tutorial-canais.html" class="sidebar-nav-link">
+                        <span class="icon">📱</span>
+                        <span>Conexão de Canais</span>
+                    </a>
+                    <a href="tutorial-configuracoes.html" class="sidebar-nav-link active">
+                        <span class="icon">⚙️</span>
+                        <span>Configurações</span>
+                    </a>
+                    <a href="tutorial-segmentos.html" class="sidebar-nav-link">
+                        <span class="icon">👥</span>
+                        <span>Criação de Segmentos</span>
+                    </a>
+                    <a href="tutorial-quick-sender.html" class="sidebar-nav-link">
+                        <span class="icon">💬</span>
+                        <span>Quick Sender</span>
+                    </a>
+                </div>
+                <div class="sidebar-nav-section">
+                    <h3>Links Úteis</h3>
+                    <a href="index.html#dicas" class="sidebar-nav-link">
+                        <span class="icon">💡</span>
+                        <span>Dicas</span>
+                    </a>
+                    <a href="index.html#troubleshooting" class="sidebar-nav-link">
+                        <span class="icon">🔧</span>
+                        <span>Problemas Comuns</span>
+                    </a>
+                </div>
+                <div class="sidebar-nav-section">
+                    <h3>Acesso Rápido</h3>
+                    <a href="https://orbitsender.com/" target="_blank" rel="noopener noreferrer" class="sidebar-nav-link">
+                        <span class="icon">🌐</span>
+                        <span>Site OrbitSender</span>
+                    </a>
+                    <a href="https://app.orbitsender.com/" target="_blank" rel="noopener noreferrer" class="sidebar-nav-link">
+                        <span class="icon">🚀</span>
+                        <span>Acessar Sistema</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="tutorial-main">
+            <div class="tutorial-content">
+                <a href="index.html" class="back-button">← Voltar para início</a>
+
+                <div class="tutorial-header">
+                    <h1>⚙️ Configurações de Taxas de Disparo</h1>
+                    <p>Tutorial completo passo a passo para configurar os intervalos de disparo e garantir entregas seguras</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="quick-links">
+                    <h3>📚 Páginas Relacionadas</h3>
+                    <ul class="quick-links-list">
+                        <li><a href="tutorial-canais.html">📱 Conexão de Canais</a></li>
+                        <li><a href="tutorial-segmentos.html">👥 Criação de Segmentos</a></li>
+                        <li><a href="tutorial-quick-sender.html">💬 Quick Sender</a></li>
+                        <li><a href="index.html#dicas">💡 Dicas Importantes</a></li>
+                    </ul>
+                </div>
+
+                <div class="tutorial-step">
+                    <h2>Por que configurar as taxas de disparo?</h2>
+                    <p>As configurações de disparo são fundamentais para o funcionamento seguro e eficiente do sistema. Elas controlam:</p>
+
+                    <ul>
+                        <li><strong>Prevenir banimentos:</strong> Intervalos adequados evitam detecção pelo WhatsApp como comportamento automatizado</li>
+                        <li><strong>Controlar velocidade:</strong> Determina quão rápido suas mensagens são enviadas</li>
+                        <li><strong>Organizar campanhas:</strong> Define o tempo entre uma campanha e outra</li>
+                        <li><strong>Manter segurança:</strong> Configurações conservadoras reduzem riscos de bloqueio</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <strong>⚠️ Importante:</strong>
+                        <p>Quanto menor o tempo entre mensagens, maior o risco de detecção e banimento pelo WhatsApp. 
+                        <strong>Sempre comece com configurações conservadoras</strong> e ajuste gradualmente conforme necessário 
+                        e conforme você ganha experiência com o sistema.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 1: Acessar a Página de Configurações</h2>
+                <p>Para configurar as taxas de disparo, siga estes passos:</p>
+
+                <h3>1.1 Navegar até Configurações</h3>
+                <ol>
+                    <li>No menu lateral esquerdo, localize a opção <strong>"Configurações"</strong> e clique nela</li>
+                    <li>Ou acesse diretamente em: <code>https://app.orbitsender.com/settings</code></li>
+                    <li>Você será direcionado para a página de configurações</li>
+                </ol>
+
+                <img src="images/03-01-configuracoes-inicial.png" alt="Página inicial de configurações do OrbitSender" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>1.2 O que você verá na página</h3>
+                <p>A página de configurações é dividida em seções:</p>
+                <ul>
+                    <li><strong>Seu Plano:</strong> Informação sobre o plano atual (ex: "Plano Básico")</li>
+                    <li><strong>Configurações de Mensagens:</strong> Intervalos entre mensagens individuais</li>
+                    <li><strong>Configurações de Campanhas:</strong> Intervalos entre campanhas</li>
+                    <li><strong>Indicador de Risco:</strong> Mostra o nível de risco baseado nas configurações</li>
+                    <li><strong>Botão Salvar:</strong> Para salvar as alterações feitas</li>
+                </ul>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 2: Entender as Configurações de Mensagens</h2>
+                <p>A primeira seção controla o intervalo entre cada mensagem enviada:</p>
+
+                <h3>2.1 Intervalo Mínimo entre Mensagens (s)</h3>
+                <ul>
+                    <li><strong>O que é:</strong> O tempo mínimo de espera (em segundos) entre enviar uma mensagem para um grupo e enviar para o próximo</li>
+                    <li><strong>Valor recomendado:</strong> <strong>10 segundos</strong> (mínimo seguro)</li>
+                    <li><strong>Como funciona:</strong> O sistema nunca esperará menos que este valor</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Exemplo:</strong>
+                    <p>Se você configurar o intervalo mínimo como 10 segundos, o sistema sempre aguardará 
+                    pelo menos 10 segundos antes de enviar a próxima mensagem.</p>
+                </div>
+
+                <h3>2.2 Intervalo Máximo entre Mensagens (s)</h3>
+                <ul>
+                    <li><strong>O que é:</strong> O tempo máximo de espera (em segundos) entre enviar uma mensagem para um grupo e enviar para o próximo</li>
+                    <li><strong>Valor recomendado:</strong> <strong>20 segundos</strong> ou mais para maior segurança</li>
+                    <li><strong>Como funciona:</strong> O sistema sorteará um tempo aleatório entre o mínimo e o máximo</li>
+                </ul>
+
+                <div class="warning-box">
+                    <strong>⚠️ Importante sobre Intervalo Máximo:</strong>
+                    <ul>
+                        <li>Valores menores que 20 segundos aumentam o risco de banimento</li>
+                        <li>O sistema mostrará um alerta se o intervalo máximo estiver muito baixo</li>
+                        <li>Recomendamos começar com <strong>20 segundos ou mais</strong></li>
+                    </ul>
+                </div>
+
+                <h3>2.3 Mensagens por Ciclo</h3>
+                <ul>
+                    <li><strong>O que é:</strong> Quantas mensagens são enviadas em sequência antes de aguardar o intervalo</li>
+                    <li><strong>Valor recomendado:</strong> <strong>1</strong> (mais seguro para iniciantes)</li>
+                    <li><strong>Limite:</strong> Pode variar de 1 a 10 mensagens</li>
+                    <li><strong>Como funciona:</strong> Se configurar como 2, o sistema enviará para 2 grupos, aguardará o intervalo, depois enviará para mais 2 grupos</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Exemplo Prático de Ciclo:</strong>
+                    <p>Se você configurar:</p>
+                    <ul>
+                        <li>Intervalo Mínimo: 10 segundos</li>
+                        <li>Intervalo Máximo: 20 segundos</li>
+                        <li>Mensagens por Ciclo: 2</li>
+                    </ul>
+                    <p>O sistema irá:</p>
+                    <ol>
+                        <li>Sortear um tempo aleatório entre 10 e 20 segundos (ex: 15 segundos)</li>
+                        <li>Aguardar 15 segundos</li>
+                        <li>Enviar mensagem para 2 grupos de uma vez</li>
+                        <li>Repetir o processo: aguardar novamente, enviar para mais 2 grupos, etc.</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 3: Entender as Configurações de Campanhas</h2>
+                <p>A segunda seção controla o intervalo entre campanhas:</p>
+
+                <h3>3.1 Intervalo Mínimo entre Campanhas (m)</h3>
+                <ul>
+                    <li><strong>O que é:</strong> O tempo mínimo de espera (em minutos) entre finalizar uma campanha e iniciar a próxima</li>
+                    <li><strong>Valor recomendado:</strong> <strong>5 minutos</strong></li>
+                    <li><strong>Como funciona:</strong> Quando você tem várias campanhas na fila, após uma terminar, o sistema aguarda no mínimo este tempo antes de iniciar a próxima</li>
+                </ul>
+
+                <h3>3.2 Intervalo Máximo entre Campanhas (m)</h3>
+                <ul>
+                    <li><strong>O que é:</strong> O tempo máximo de espera (em minutos) entre finalizar uma campanha e iniciar a próxima</li>
+                    <li><strong>Valor recomendado:</strong> <strong>15 minutos</strong> ou mais</li>
+                    <li><strong>Como funciona:</strong> O sistema sorteará um tempo aleatório entre o mínimo e o máximo antes de iniciar a próxima campanha</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Estratégia de Disparo ao Longo do Dia:</strong>
+                    <p>Se você quer disparar campanhas durante todo o dia automaticamente:</p>
+                    <ul>
+                        <li>Aumente os intervalos entre campanhas (ex: mínimo 30 minutos, máximo 60 minutos)</li>
+                        <li>Cadastre várias campanhas de uma vez</li>
+                        <li>O sistema irá disparando automaticamente durante o dia, respeitando os intervalos configurados</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 4: Configurar os Valores</h2>
+                <p>Agora vamos ajustar os valores na prática:</p>
+
+                <h3>4.1 Ajustar Intervalo Mínimo entre Mensagens</h3>
+                <ol>
+                    <li>Localize o campo <strong>"Intervalo Mínimo entre Mensagens (s)"</strong></li>
+                    <li>Clique no campo numérico (spinbutton)</li>
+                    <li>Digite o valor desejado ou use as setas para aumentar/diminuir</li>
+                    <li>Recomendamos manter em <strong>10 segundos</strong> (valor seguro)</li>
+                </ol>
+
+                <h3>4.2 Ajustar Intervalo Máximo entre Mensagens</h3>
+                <ol>
+                    <li>Localize o campo <strong>"Intervalo Máximo entre Mensagens (s)"</strong></li>
+                    <li>Clique no campo numérico</li>
+                    <li>Digite o valor desejado (recomendamos <strong>20 segundos ou mais</strong>)</li>
+                    <li>Valores menores que 20 segundos mostrarão um alerta de risco</li>
+                </ol>
+
+                <img src="images/03-02-configuracoes-ajustadas.png" alt="Configurações ajustadas com intervalo máximo de 20 segundos" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>4.3 Ajustar Mensagens por Ciclo</h3>
+                <ol>
+                    <li>Localize o campo <strong>"Mensagens por Ciclo"</strong></li>
+                    <li>Para iniciantes, recomendamos manter em <strong>1</strong> (mais seguro)</li>
+                    <li>Conforme ganha experiência, você pode aumentar gradualmente (até no máximo 10)</li>
+                </ol>
+
+                <h3>4.4 Ajustar Intervalos entre Campanhas</h3>
+                <ol>
+                    <li>Localize os campos de <strong>"Intervalo Mínimo entre Campanhas (m)"</strong> e <strong>"Intervalo Máximo entre Campanhas (m)"</strong></li>
+                    <li>Configure valores em minutos (ex: mínimo 5, máximo 15)</li>
+                    <li>Estes valores determinam quanto tempo o sistema aguarda entre uma campanha e outra</li>
+                </ol>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 5: Entender o Indicador de Risco</h2>
+                <p>O sistema mostra um indicador visual do risco de banimento baseado nas suas configurações:</p>
+
+                <h3>5.1 Como o Risco é Calculado</h3>
+                <p>O sistema avalia o risco baseado em:</p>
+                <ul>
+                    <li>Intervalo máximo entre mensagens (valores menores que 20s aumentam o risco)</li>
+                    <li>Mensagens por ciclo (valores maiores aumentam o risco)</li>
+                    <li>Configurações gerais de segurança</li>
+                </ul>
+
+                <h3>5.2 Níveis de Risco</h3>
+                <div class="tips-grid">
+                    <div class="tip-card tip-success">
+                        <h3>🟢 Risco Baixo</h3>
+                        <p>Configurações muito seguras. Ideal para iniciantes e uso diário.</p>
+                        <ul>
+                            <li>Intervalo máximo ≥ 20s</li>
+                            <li>Mensagens por ciclo: 1-2</li>
+                        </ul>
+                    </div>
+
+                    <div class="tip-card tip-warning">
+                        <h3>🟡 Risco Moderado</h3>
+                        <p>Configurações moderadas. Use com cautela e monitore resultados.</p>
+                        <ul>
+                            <li>Intervalo máximo: 15-19s</li>
+                            <li>Mensagens por ciclo: 2-3</li>
+                        </ul>
+                    </div>
+
+                    <div class="tip-card tip-error">
+                        <h3>🔴 Risco Considerável</h3>
+                        <p>Configurações arriscadas. Alto risco de banimento. Não recomendado.</p>
+                        <ul>
+                            <li>Intervalo máximo < 15s</li>
+                            <li>Mensagens por ciclo: 3+</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="warning-box">
+                    <strong>⚠️ Sobre o Indicador de Risco:</strong>
+                    <p>O indicador mostra mensagens como "Tá arriscando um pouquinho, hein?" ou "Vivendo perigosamente..." 
+                    quando o risco está alto. Sempre que possível, ajuste as configurações para manter o risco baixo.</p>
+                </div>
+
+                <h3>5.3 Recomendação do Sistema</h3>
+                <p>O sistema sempre mostra uma recomendação:</p>
+                <div class="info-box">
+                    <strong>✅ Recomendado pelo Sistema:</strong>
+                    <p><strong>"10-20s entre disparos, 1 disparo por loop"</strong></p>
+                    <p>Esta é a configuração mais segura e recomendada para começar a usar o sistema.</p>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 6: Salvar as Configurações</h2>
+                <p>Após ajustar todos os valores, é necessário salvar as alterações:</p>
+
+                <h3>6.1 Revisar as Configurações</h3>
+                <ol>
+                    <li>Revise todos os valores que você configurou</li>
+                    <li>Verifique se o indicador de risco está em um nível aceitável</li>
+                    <li>Certifique-se de que os valores estão dentro dos recomendados</li>
+                </ol>
+
+                <h3>6.2 Salvar Alterações</h3>
+                <ol>
+                    <li>Role a página até o final (se necessário)</li>
+                    <li>Localize o botão <strong>"Salvar Alterações"</strong> na parte inferior da página</li>
+                    <li>Clique no botão</li>
+                    <li>Aguarde alguns segundos enquanto as configurações são salvas</li>
+                </ol>
+
+                <img src="images/03-03-configuracoes-salvas.png" alt="Configurações salvas com sucesso" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <div class="success-box">
+                    <strong>✅ Configurações Salvas!</strong>
+                    <p>Após salvar, as novas configurações serão aplicadas a:</p>
+                    <ul>
+                        <li>✓ Novas campanhas criadas</li>
+                        <li>✓ Novos disparos via Quick Sender</li>
+                        <li>✓ Campanhas agendadas que ainda não iniciaram</li>
+                    </ul>
+                </div>
+
+                <div class="warning-box">
+                    <strong>⚠️ Importante:</strong>
+                    <p>As configurações são aplicadas <strong>apenas para novas campanhas e disparos</strong>. 
+                    Campanhas que já estão em execução, na fila ou sendo processadas manterão as configurações 
+                    do momento em que foram criadas. Para aplicar novas configurações a campanhas existentes, 
+                    você precisará criar novas campanhas.</p>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Configurações Recomendadas</h2>
+                <p>Aqui estão as configurações recomendadas para diferentes níveis de experiência:</p>
+
+                <h3>✅ Para Iniciantes (Mais Seguro)</h3>
+                <div class="success-box">
+                    <ul>
+                        <li><strong>Intervalo Mínimo entre Mensagens:</strong> 10 segundos</li>
+                        <li><strong>Intervalo Máximo entre Mensagens:</strong> 20 segundos</li>
+                        <li><strong>Mensagens por Ciclo:</strong> 1</li>
+                        <li><strong>Intervalo Mínimo entre Campanhas:</strong> 5 minutos</li>
+                        <li><strong>Intervalo Máximo entre Campanhas:</strong> 15 minutos</li>
+                    </ul>
+                    <p><strong>Risco:</strong> Baixo 🟢 | <strong>Velocidade:</strong> Moderada</p>
+                </div>
+
+                <h3>✅ Para Usuários Intermediários</h3>
+                <div class="info-box">
+                    <ul>
+                        <li><strong>Intervalo Mínimo entre Mensagens:</strong> 10 segundos</li>
+                        <li><strong>Intervalo Máximo entre Mensagens:</strong> 15 segundos</li>
+                        <li><strong>Mensagens por Ciclo:</strong> 2</li>
+                        <li><strong>Intervalo Mínimo entre Campanhas:</strong> 5 minutos</li>
+                        <li><strong>Intervalo Máximo entre Campanhas:</strong> 10 minutos</li>
+                    </ul>
+                    <p><strong>Risco:</strong> Moderado 🟡 | <strong>Velocidade:</strong> Boa</p>
+                    <p><strong>Recomendado:</strong> Use apenas após testar com configurações conservadoras por algum tempo.</p>
+                </div>
+
+                <h3>❌ NÃO Recomendado</h3>
+                <div class="warning-box">
+                    <strong>Evite estas configurações:</strong>
+                    <ul>
+                        <li>Intervalos menores que 10 segundos</li>
+                        <li>Intervalo máximo menor que 15 segundos (aumenta risco de banimento)</li>
+                        <li>Mais de 3 mensagens por ciclo sem experiência prévia</li>
+                        <li>Intervalos muito baixos entre campanhas (< 1 minuto)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Dicas de Segurança e Boas Práticas</h2>
+
+                <div class="tips-grid">
+                    <div class="tip-card tip-success">
+                        <h3>✅ Boas Práticas</h3>
+                        <ul>
+                            <li><strong>Sempre comece conservador:</strong> Use as configurações recomendadas para iniciantes</li>
+                            <li><strong>Ajuste gradualmente:</strong> Após testar com segurança, aumente velocidade pouco a pouco</li>
+                            <li><strong>Monitore resultados:</strong> Observe se há problemas ou banimentos ao mudar configurações</li>
+                            <li><strong>Volte para o seguro:</strong> Se houver problemas, volte para configurações mais conservadoras</li>
+                            <li><strong>Use múltiplos canais:</strong> Para aumentar velocidade sem aumentar risco, conecte mais canais</li>
+                        </ul>
+                    </div>
+
+                    <div class="tip-card tip-warning">
+                        <h3>⚠️ O que evitar</h3>
+                        <ul>
+                            <li><strong>Não comece rápido:</strong> Evite configurar intervalos baixos logo no início</li>
+                            <li><strong>Não ignore alertas:</strong> Se o sistema mostra risco alto, ajuste as configurações</li>
+                            <li><strong>Não aumente ciclos sem testar:</strong> Teste com 1 ciclo antes de aumentar</li>
+                            <li><strong>Não mude durante execução:</strong> Evite alterar configurações enquanto campanhas estão rodando</li>
+                            <li><strong>Não ignore o indicador:</strong> O termômetro de risco existe para sua segurança</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Resumo do Processo Completo</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Acessar Configurações</h3>
+                            <p>No menu lateral, clique em "Configurações" ou acesse: <code>https://app.orbitsender.com/settings</code></p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Configurar Intervalo Mínimo</h3>
+                            <p>Defina o intervalo mínimo entre mensagens (recomendado: 10s)</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Configurar Intervalo Máximo</h3>
+                            <p>Defina o intervalo máximo entre mensagens (recomendado: ≥20s)</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Configurar Mensagens por Ciclo</h3>
+                            <p>Defina quantas mensagens por ciclo (recomendado: 1 para iniciantes)</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Configurar Intervalos entre Campanhas</h3>
+                            <p>Defina os intervalos mínimos e máximos entre campanhas</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h3>Verificar Indicador de Risco</h3>
+                            <p>Confira se o risco está em nível aceitável</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">7</div>
+                        <div class="step-content">
+                            <h3>Salvar Alterações</h3>
+                            <p>Clique em "Salvar Alterações" para aplicar as configurações</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Próximos Passos</h2>
+                <p>Agora que você configurou as taxas de disparo, você está pronto para:</p>
+                <ul>
+                    <li><a href="tutorial-segmentos.html" class="btn btn-primary">👥 Criar seu primeiro segmento</a></li>
+                    <li><a href="tutorial-quick-sender.html" class="btn btn-outline">💬 Fazer seu primeiro disparo rápido</a></li>
+                    <li><a href="index.html" class="btn btn-outline">📚 Voltar ao índice</a></li>
+                </ul>
+            </div>
+            </div>
+
+            <footer class="footer">
+                <p>Documentação OrbitSender © 2025</p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

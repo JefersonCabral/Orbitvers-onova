@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Campanhas - OrbitSender</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-button">← Voltar para início</a>
+
+        <div class="tutorial-content">
+            <div class="tutorial-header">
+                <h1>📊 Gerenciamento de Campanhas</h1>
+                <p>Aprenda a criar, monitorar e gerenciar suas campanhas de disparo</p>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>O que são Campanhas?</h2>
+                <p>Campanhas são disparos organizados que você pode criar, agendar e monitorar. Diferente do Quick Sender, as campanhas permitem:</p>
+
+                <ul>
+                    <li><strong>Agendamento:</strong> Programar disparos para data e hora específicas</li>
+                    <li><strong>Organização:</strong> Dar nome e identificar facilmente</li>
+                    <li><strong>Monitoramento:</strong> Acompanhar status e resultados detalhados</li>
+                    <li><strong>Controle:</strong> Cancelar, pausar ou reprocessar campanhas</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>ℹ️ Diferença entre Campanhas e Quick Sender:</strong>
+                    <ul>
+                        <li><strong>Quick Sender:</strong> Disparo imediato, sem agendamento</li>
+                        <li><strong>Campanhas:</strong> Permite agendamento e melhor organização</li>
+                        <li>Ambos usam os mesmos segmentos e configurações</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Acessando campanhas</h2>
+                <ol>
+                    <li>No menu lateral, clique em <strong>"Campanhas"</strong></li>
+                    <li>Você verá a lista de todas as suas campanhas</li>
+                    <li>As campanhas aparecem com:
+                        <ul>
+                            <li>Nome da campanha</li>
+                            <li>Status atual</li>
+                            <li>Data de criação</li>
+                            <li>Progresso (se em andamento)</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Criando uma nova campanha</h2>
+                <p>Para criar uma campanha completa, siga estes passos:</p>
+
+                <h3>Passo 1: Acessar a criação</h3>
+                <ol>
+                    <li>Na página de Campanhas, clique em <strong>"Nova Campanha"</strong></li>
+                    <li>Ou clique em <strong>"Campanhas"</strong> → <strong>"Criar Campanha"</strong> no menu</li>
+                    <li>Você será redirecionado para o formulário de criação</li>
+                </ol>
+
+                <h3>Passo 2: Preencher informações básicas</h3>
+                <ol>
+                    <li><strong>Nome da campanha:</strong> Escolha um nome descritivo (ex: "Promoção Shopee - Dia 15")</li>
+                    <li><strong>Mensagem:</strong> Digite ou cole a mensagem que deseja enviar</li>
+                    <li><strong>Imagem:</strong> Adicione uma imagem (PNG, JPG ou JPEG)</li>
+                </ol>
+
+                <h3>Passo 3: Selecionar segmento e grupos</h3>
+                <ol>
+                    <li><strong>Opção 1 - Usar segmento:</strong> Selecione um segmento que você já criou</li>
+                    <li><strong>Opção 2 - Seleção manual:</strong> Selecione canais e grupos manualmente</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 Recomendação:</strong>
+                    Use segmentos sempre que possível. Isso facilita a organização e você pode 
+                    reutilizar os mesmos grupos em várias campanhas.
+                </div>
+
+                <h3>Passo 4: Agendar (opcional)</h3>
+                <ol>
+                    <li>Selecione a data e hora desejada para o disparo</li>
+                    <li>Você pode agendar para qualquer momento futuro</li>
+                    <li>Se não agendar, a campanha entrará na fila imediatamente</li>
+                </ol>
+
+                <h3>Passo 5: Criar campanha</h3>
+                <ol>
+                    <li>Revise todas as informações</li>
+                    <li>Clique em <strong>"Criar Campanha"</strong> ou <strong>"Salvar"</strong></li>
+                    <li>A campanha será criada e aparecerá na lista</li>
+                </ol>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Status das campanhas</h2>
+                <p>Entenda os diferentes status que uma campanha pode ter:</p>
+
+                <ul>
+                    <li><strong>🟡 Pendente:</strong> Aguardando na fila para ser processada</li>
+                    <li><strong>🔵 Em Progresso:</strong> Sendo enviada no momento</li>
+                    <li><strong>🟢 Concluída:</strong> Finalizada com sucesso</li>
+                    <li><strong>🔴 Erro:</strong> Algum problema ocorreu durante o envio</li>
+                    <li><strong>⚫ Cancelada:</strong> Campanha cancelada pelo usuário</li>
+                </ul>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Monitorando campanhas</h2>
+                <p>Na página de Campanhas, você pode ver:</p>
+
+                <ul>
+                    <li><strong>Lista de campanhas:</strong> Todas as suas campanhas criadas</li>
+                    <li><strong>Status em tempo real:</strong> O status atual de cada campanha</li>
+                    <li><strong>Progresso:</strong> Quantas mensagens foram enviadas / total</li>
+                    <li><strong>Detalhes:</strong> Informações sobre grupos e canais usados</li>
+                </ul>
+
+                <h3>Visualizando detalhes</h3>
+                <ol>
+                    <li>Clique em uma campanha para ver mais detalhes</li>
+                    <li>Você verá:
+                        <ul>
+                            <li>Mensagem enviada</li>
+                            <li>Imagem anexada</li>
+                            <li>Grupos que receberam</li>
+                            <li>Status de cada envio</li>
+                            <li>Erros (se houver)</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Fila de campanhas</h2>
+                <p>Quando você cria várias campanhas, elas entram em uma fila:</p>
+
+                <ul>
+                    <li><strong>Ordem:</strong> Campanhas são processadas na ordem de criação</li>
+                    <li><strong>Intervalo:</strong> Entre campanhas, o sistema aguarda o tempo configurado</li>
+                    <li><strong>Automático:</strong> A próxima campanha começa automaticamente</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>ℹ️ Como funciona:</strong>
+                    <p>Se você criar 5 campanhas:</p>
+                    <ol>
+                        <li>Campanha 1 inicia imediatamente</li>
+                        <li>Campanha 1 finaliza</li>
+                        <li>Sistema aguarda o intervalo entre campanhas</li>
+                        <li>Campanha 2 inicia automaticamente</li>
+                        <li>E assim por diante...</li>
+                    </ol>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Gerenciando campanhas</h2>
+                <p>Você pode fazer várias ações com suas campanhas:</p>
+
+                <h3>Cancelar campanha</h3>
+                <ol>
+                    <li>Na lista de campanhas, encontre a campanha que deseja cancelar</li>
+                    <li>Clique no botão <strong>"Cancelar"</strong> ou ícone de X</li>
+                    <li>Confirme o cancelamento</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Importante:</strong>
+                    <p>Se você cancelar uma campanha que já está sendo processada:</p>
+                    <ul>
+                        <li>Mensagens já enviadas não serão desfeitas</li>
+                        <li>Apenas mensagens pendentes serão canceladas</li>
+                        <li>O sistema pode levar alguns segundos para processar o cancelamento</li>
+                    </ul>
+                </div>
+
+                <h3>Ver estatísticas</h3>
+                <ol>
+                    <li>Clique em uma campanha para ver detalhes</li>
+                    <li>Você verá estatísticas como:
+                        <ul>
+                            <li>Total de grupos</li>
+                            <li>Mensagens enviadas com sucesso</li>
+                            <li>Mensagens com erro</li>
+                            <li>Taxa de sucesso</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Problemas comuns</h2>
+
+                <h3>❌ Campanha ficou pendente e não está enviando</h3>
+                <p><strong>Solução:</strong></p>
+                <ol>
+                    <li>Cancele a campanha pendente</li>
+                    <li>Verifique se os canais estão conectados (status: Ativo)</li>
+                    <li>Verifique se o segmento possui grupos selecionados</li>
+                    <li>Crie uma nova campanha</li>
+                </ol>
+                <p class="note">💡 Se o problema persistir, entre em contato com o suporte.</p>
+
+                <h3>❌ Campanha cancelada ainda está enviando</h3>
+                <p><strong>Possível causa:</strong></p>
+                <ul>
+                    <li>O cancelamento pode levar alguns segundos para processar</li>
+                    <li>Mensagens já em fila podem ser enviadas</li>
+                    <li>Mensagens já iniciadas não podem ser canceladas</li>
+                </ul>
+                <p><strong>Solução:</strong> Aguarde alguns minutos. Se continuar, entre em contato com o suporte.</p>
+
+                <h3>❌ Erros em algumas mensagens</h3>
+                <p><strong>Possíveis causas:</strong></p>
+                <ul>
+                    <li>O número não está mais no grupo</li>
+                    <li>O canal desconectou durante o envio</li>
+                    <li>Problema temporário com o WhatsApp</li>
+                </ul>
+                <p><strong>Solução:</strong> Verifique os detalhes do erro na campanha. Reconecte canais se necessário.</p>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Dicas de uso</h2>
+                <div class="tips-grid">
+                    <div class="tip-card tip-success">
+                        <h3>✅ Boas Práticas</h3>
+                        <ul>
+                            <li>Dê nomes descritivos às campanhas</li>
+                            <li>Revise antes de criar</li>
+                            <li>Monitore campanhas em andamento</li>
+                            <li>Verifique erros regularmente</li>
+                        </ul>
+                    </div>
+
+                    <div class="tip-card tip-info">
+                        <h3>ℹ️ Organização</h3>
+                        <ul>
+                            <li>Use nomes descritivos (ex: "Shopee - 15/01")</li>
+                            <li>Crie campanhas separadas por produto/categoria</li>
+                            <li>Documente campanhas importantes</li>
+                            <li>Mantenha histórico para análise</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Próximos passos</h2>
+                <p>Agora que você domina as campanhas, explore:</p>
+                <ul>
+                    <li><a href="index.html#troubleshooting" class="btn btn-primary">🔧 Ver troubleshooting</a></li>
+                    <li><a href="index.html#dicas" class="btn btn-outline">💡 Ver mais dicas</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <p>Documentação OrbitSender © 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
+

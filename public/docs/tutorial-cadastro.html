@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro e Login - OrbitSender</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="tutorial-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-logo">
+                    <span>🚀</span>
+                    <span>OrbitSender</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-nav-section">
+                    <h3>Documentação</h3>
+                    <a href="index.html" class="sidebar-nav-link">
+                        <span class="icon">🏠</span>
+                        <span>Início</span>
+                    </a>
+                </div>
+                <div class="sidebar-nav-section">
+                    <h3>Tutoriais</h3>
+                    <a href="tutorial-cadastro.html" class="sidebar-nav-link active">
+                        <span class="icon">📝</span>
+                        <span>Cadastro e Login</span>
+                    </a>
+                    <a href="tutorial-canais.html" class="sidebar-nav-link">
+                        <span class="icon">📱</span>
+                        <span>Conexão de Canais</span>
+                    </a>
+                    <a href="tutorial-configuracoes.html" class="sidebar-nav-link">
+                        <span class="icon">⚙️</span>
+                        <span>Configurações</span>
+                    </a>
+                    <a href="tutorial-segmentos.html" class="sidebar-nav-link">
+                        <span class="icon">👥</span>
+                        <span>Criação de Segmentos</span>
+                    </a>
+                    <a href="tutorial-quick-sender.html" class="sidebar-nav-link">
+                        <span class="icon">💬</span>
+                        <span>Quick Sender</span>
+                    </a>
+                </div>
+                <div class="sidebar-nav-section">
+                    <h3>Links Úteis</h3>
+                    <a href="index.html#dicas" class="sidebar-nav-link">
+                        <span class="icon">💡</span>
+                        <span>Dicas</span>
+                    </a>
+                    <a href="index.html#troubleshooting" class="sidebar-nav-link">
+                        <span class="icon">🔧</span>
+                        <span>Problemas Comuns</span>
+                    </a>
+                </div>
+                <div class="sidebar-nav-section">
+                    <h3>Acesso Rápido</h3>
+                    <a href="https://orbitsender.com/" target="_blank" rel="noopener noreferrer" class="sidebar-nav-link">
+                        <span class="icon">🌐</span>
+                        <span>Site OrbitSender</span>
+                    </a>
+                    <a href="https://app.orbitsender.com/" target="_blank" rel="noopener noreferrer" class="sidebar-nav-link">
+                        <span class="icon">🚀</span>
+                        <span>Acessar Sistema</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="tutorial-main">
+            <div class="tutorial-content">
+                <a href="index.html" class="back-button">← Voltar para início</a>
+
+                <div class="tutorial-header">
+                    <h1>📝 Cadastro e Login no OrbitSender</h1>
+                    <p>Tutorial completo passo a passo para criar sua conta e fazer login</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="quick-links">
+                    <h3>📚 Páginas Relacionadas</h3>
+                    <ul class="quick-links-list">
+                        <li><a href="tutorial-canais.html">📱 Conexão de Canais</a></li>
+                        <li><a href="tutorial-configuracoes.html">⚙️ Configurações de Disparo</a></li>
+                        <li><a href="tutorial-segmentos.html">👥 Criação de Segmentos</a></li>
+                        <li><a href="index.html#dicas">💡 Dicas Importantes</a></li>
+                    </ul>
+                </div>
+
+                <div class="tutorial-step">
+                <h2>Introdução</h2>
+                <p>Bem-vindo ao OrbitSender! Este tutorial vai te guiar através de todo o processo de cadastro, 
+                desde a entrada na fila de espera até a finalização do registro.</p>
+
+                <div class="info-box">
+                    <strong>ℹ️ Importante sobre a Fila de Espera:</strong>
+                    <p>Devido à alta demanda, atualmente o acesso à plataforma está controlado através de uma 
+                    <strong>fila de espera</strong>. Após finalizar o cadastro, você precisará entrar em contato 
+                    com o suporte para solicitar a liberação da sua conta.</p>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 1: Acessar a página de registro</h2>
+                <p>Para começar o cadastro, siga estes passos:</p>
+
+                <ol>
+                    <li>Acesse o link de registro: <code class="code-block">https://app.orbitsender.com/register</code></li>
+                    <li>Você verá a tela inicial com informações sobre a fila de espera</li>
+                    <li>Leia as informações apresentadas</li>
+                </ol>
+
+                <img src="images/01-01-registro-inicial.png" alt="Página inicial de registro do OrbitSender" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <div class="info-box">
+                    <strong>💡 O que você verá:</strong>
+                    <ul>
+                        <li>Mensagem de boas-vindas do OrbitSender</li>
+                        <li>Informação sobre a fila de espera</li>
+                        <li>Botão "Entrar na Fila de Espera"</li>
+                        <li>Link para fazer login (se já tiver conta)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 2: Entrar na fila de espera</h2>
+                <p>Clique no botão <strong>"Entrar na Fila de Espera"</strong> para prosseguir com o cadastro.</p>
+
+                <img src="images/01-02-fila-espera.png" alt="Tela após clicar em entrar na fila de espera" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <div class="warning-box">
+                    <strong>⚠️ Sobre a Fila de Espera:</strong>
+                    <p>Este sistema foi implementado para garantir a melhor experiência e qualidade do serviço. 
+                    Após o cadastro, você precisará entrar em contato com o suporte pelo WhatsApp para solicitar 
+                    a liberação da sua conta.</p>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 3: Etapa 1 - Dados de Acesso</h2>
+                <p>O cadastro é dividido em 4 etapas. Vamos começar pela primeira: <strong>Dados de Acesso</strong>.</p>
+
+                <h3>3.1 Preenchendo o Email</h3>
+                <ol>
+                    <li>No campo <strong>"Email"</strong>, digite um email válido que você tenha acesso</li>
+                    <li>Exemplo: <code>tutorial@orbitsender.com</code></li>
+                    <li>Certifique-se de que o email está correto, pois você receberá confirmações nele</li>
+                </ol>
+
+                <img src="images/01-03-email-preenchido.png" alt="Campo de email preenchido" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>3.2 Criando uma Senha Segura</h3>
+                <p>A senha deve atender aos seguintes requisitos de segurança:</p>
+                <ul>
+                    <li><strong>✓ Pelo menos 8 caracteres</strong></li>
+                    <li><strong>✓ Pelo menos uma letra maiúscula</strong></li>
+                    <li><strong>✓ Pelo menos uma letra minúscula</strong></li>
+                    <li><strong>✓ Pelo menos um número</strong></li>
+                    <li><strong>✓ Pelo menos um caractere especial</strong> (!@#$%^&*)</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Exemplo de senha forte:</strong>
+                    <p><code>Tutorial2024!OrbitX</code></p>
+                    <p>Esta senha atende todos os requisitos:
+                    <ul>
+                        <li>✓ Tem mais de 8 caracteres</li>
+                        <li>✓ Tem letras maiúsculas (T, O, X)</li>
+                        <li>✓ Tem letras minúsculas (utorial, rbit)</li>
+                        <li>✓ Tem números (2024)</li>
+                        <li>✓ Tem caractere especial (!)</li>
+                    </ul>
+                    </p>
+                </div>
+
+                <h3>3.3 Confirmando a Senha</h3>
+                <ol>
+                    <li>No campo <strong>"Confirmar Senha"</strong>, digite exatamente a mesma senha</li>
+                    <li>As duas senhas devem ser idênticas</li>
+                    <li>O sistema validará automaticamente se as senhas coincidem</li>
+                </ol>
+
+                <img src="images/01-04-dados-acesso-completo.png" alt="Etapa 1 completa com senha validada como forte" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <div class="success-box">
+                    <strong>✅ Validação da Senha:</strong>
+                    <p>Quando sua senha atender todos os requisitos, você verá um indicador verde mostrando 
+                    <strong>"Forte"</strong> e uma lista de validações confirmadas (✓). O botão <strong>"Próximo"</strong> 
+                    será habilitado automaticamente.</p>
+                </div>
+
+                <h3>3.4 Prosseguir para próxima etapa</h3>
+                <p>Após preencher todos os campos e verificar que o botão "Próximo" está habilitado, clique nele 
+                para seguir para a Etapa 2.</p>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 4: Etapa 2 - Dados Pessoais</h2>
+                <p>Na segunda etapa, você preencherá suas informações pessoais:</p>
+
+                <img src="images/01-05-dados-pessoais.png" alt="Etapa 2 - Dados Pessoais" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>4.1 Nome Completo</h3>
+                <ol>
+                    <li>No campo <strong>"Nome Completo"</strong>, digite seu nome completo</li>
+                    <li>Exemplo: <code>Usuário Tutorial OrbitSender</code></li>
+                    <li>Use o mesmo nome que você usa profissionalmente</li>
+                </ol>
+
+                <h3>4.2 Número de WhatsApp</h3>
+                <ol>
+                    <li>No campo <strong>"WhatsApp"</strong>, digite seu número de WhatsApp</li>
+                    <li>O formato deve ser: <code>(99) 99999-9999</code></li>
+                    <li>O sistema formata automaticamente conforme você digita</li>
+                    <li>Exemplo: <code>(44) 99826-9363</code></li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>ℹ️ Sobre o número de WhatsApp:</strong>
+                    <p>O número informado aqui é apenas para <strong>contato do suporte</strong> com você. 
+                    <strong>NÃO será usado para fazer os disparos</strong>. Os disparos serão feitos pelos 
+                    números que você conectar posteriormente na seção de Canais.</p>
+                </div>
+
+                <img src="images/01-06-dados-pessoais-completo.png" alt="Etapa 2 completa - Dados Pessoais preenchidos" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>4.3 Prosseguir para próxima etapa</h3>
+                <p>Após preencher os dados pessoais, clique em <strong>"Próximo"</strong> para seguir para a Etapa 3.</p>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 5: Etapa 3 - Empresa</h2>
+                <p>Na terceira etapa, você preencherá informações sobre sua empresa ou negócio:</p>
+
+                <img src="images/01-07-dados-empresa.png" alt="Etapa 3 - Dados da Empresa" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>5.1 Nome da Empresa</h3>
+                <ol>
+                    <li>No campo <strong>"Nome da Empresa"</strong>, digite o nome da sua empresa ou negócio</li>
+                    <li>Exemplo: <code>OrbitSender Tutorial</code></li>
+                    <li>Se você é pessoa física, pode usar seu nome ou um nome comercial</li>
+                </ol>
+
+                <h3>5.2 CPF/CNPJ</h3>
+                <ol>
+                    <li>No campo <strong>"CPF/CNPJ"</strong>, digite seu CPF ou CNPJ</li>
+                    <li>Você pode digitar com ou sem pontuação (o sistema formata automaticamente)</li>
+                    <li>O sistema valida se o CPF/CNPJ é válido</li>
+                </ol>
+
+                <div class="warning-box">
+                    <strong>⚠️ Validação de CPF/CNPJ:</strong>
+                    <p>O sistema faz validação automática do CPF/CNPJ. Se aparecer a mensagem 
+                    <strong>"CNPJ inválido"</strong> ou <strong>"CPF inválido"</strong>, verifique se você 
+                    digitou corretamente. O campo deve estar formatado automaticamente.</p>
+                </div>
+
+                <img src="images/01-08-dados-empresa-completo.png" alt="Etapa 3 com dados preenchidos" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <img src="images/01-09-cnpj-corrigido.png" alt="CNPJ validado corretamente" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>5.3 Tipo de Negócio</h3>
+                <ol>
+                    <li>No campo <strong>"Tipo de Negócio"</strong>, selecione a opção que melhor descreve seu negócio</li>
+                    <li>Opções disponíveis:
+                        <ul>
+                            <li>E-commerce</li>
+                            <li>Varejo</li>
+                            <li>Prestação de Serviços</li>
+                            <li>Educação</li>
+                            <li>Saúde</li>
+                            <li>Alimentação</li>
+                            <li>Tecnologia</li>
+                            <li>Outro</li>
+                        </ul>
+                    </li>
+                    <li>Selecione a opção mais adequada</li>
+                </ol>
+
+                <h3>5.4 Prosseguir para finalização</h3>
+                <p>Após preencher todos os dados da empresa e validar o CPF/CNPJ, clique em <strong>"Próximo"</strong> 
+                para seguir para a etapa final.</p>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 6: Etapa 4 - Finalizar</h2>
+                <p>Na etapa final, você preencherá algumas informações adicionais e aceitará os termos:</p>
+
+                <img src="images/01-10-finalizar.png" alt="Etapa 4 - Finalizar cadastro" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>6.1 Como conheceu o OrbitSender?</h3>
+                <ol>
+                    <li>No campo <strong>"Como conheceu o OrbitSender?"</strong>, selecione uma opção:</li>
+                    <li>Opções disponíveis:
+                        <ul>
+                            <li>Busca no Google</li>
+                            <li>Redes Sociais</li>
+                            <li>Indicação de Amigo</li>
+                            <li>Anúncio</li>
+                            <li>Outro</li>
+                        </ul>
+                    </li>
+                    <li>Selecione a opção que melhor descreve como você conheceu a plataforma</li>
+                </ol>
+
+                <h3>6.2 Motivo para usar o OrbitSender</h3>
+                <ol>
+                    <li>No campo <strong>"Qual o principal motivo para usar o OrbitSender?"</strong>, descreva como você pretende utilizar a plataforma</li>
+                    <li>Exemplo: <code>Disparar campanhas promocionais para grupos de WhatsApp de forma automatizada e segura.</code></li>
+                    <li>Seja objetivo e claro sobre seu objetivo</li>
+                </ol>
+
+                <h3>6.3 Aceitar Termos de Uso</h3>
+                <ol>
+                    <li>Marque a checkbox <strong>"Eu li e aceito os Termos de Uso e Política de Privacidade"</strong></li>
+                    <li>Leia os termos antes de marcar (você pode clicar nos links para visualizar)</li>
+                    <li>Este campo é obrigatório para finalizar o cadastro</li>
+                </ol>
+
+                <img src="images/01-11-finalizar-completo.png" alt="Etapa 4 completa e pronta para finalizar" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>6.4 Finalizar Cadastro</h3>
+                <ol>
+                    <li>Revise todas as informações preenchidas</li>
+                    <li>Certifique-se de que todos os campos estão corretos</li>
+                    <li>Clique no botão <strong>"Finalizar Cadastro"</strong></li>
+                    <li>Aguarde o processamento</li>
+                </ol>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 7: Cadastro Concluído</h2>
+                <p>Após clicar em "Finalizar Cadastro", você verá uma tela de confirmação:</p>
+
+                <img src="images/01-12-cadastro-concluido.png" alt="Tela de cadastro concluído com sucesso" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <div class="success-box">
+                    <strong>✅ Cadastro Realizado com Sucesso!</strong>
+                    <p>Você verá uma mensagem de confirmação informando que seu cadastro foi realizado com sucesso.</p>
+                </div>
+
+                <h3>O que fazer agora?</h3>
+                <p>Após o cadastro, você receberá as seguintes instruções:</p>
+                <ul>
+                    <li>✓ Verifique sua caixa de email para confirmação</li>
+                    <li>✓ Guarde suas credenciais de acesso com segurança</li>
+                    <li>✓ Nossa equipe entrará em contato em breve</li>
+                </ul>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>⚠️ IMPORTANTE: Solicitar Liberação da Conta</h2>
+                <p>Devido à fila de espera, após finalizar o cadastro, você <strong>precisa entrar em contato com o suporte</strong> 
+                para solicitar a liberação da sua conta.</p>
+
+                <div class="warning-box" style="background-color: rgba(245, 158, 11, 0.15); border-left: 4px solid var(--warning-color); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h3 style="color: var(--warning-color); margin-bottom: 1rem;">📱 Contato do Suporte</h3>
+                    <p style="font-size: 1.2rem; margin-bottom: 1rem;"><strong>Suporte OrbitSender</strong></p>
+                    <p style="font-size: 1.4rem; margin-bottom: 1rem;">
+                        <strong style="color: var(--success-color);">WhatsApp: (44) 9 9826-9363</strong>
+                    </p>
+                    <p>Entre em contato pelo WhatsApp informando:</p>
+                    <ol style="margin-left: 1.5rem; margin-top: 0.5rem;">
+                        <li>Seu email cadastrado (<code>tutorial@orbitsender.com</code> no nosso exemplo)</li>
+                        <li>Seu nome completo</li>
+                        <li>Que você finalizou o cadastro e precisa da liberação da conta</li>
+                    </ol>
+                </div>
+
+                <h3>O que o suporte fará:</h3>
+                <ul>
+                    <li>Verificará seu cadastro</li>
+                    <li>Liberará o acesso à sua conta</li>
+                    <li>Te avisará quando a conta estiver liberada</li>
+                    <li>Poderá fornecer orientações adicionais se necessário</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Dica:</strong>
+                    <p>Tenha em mãos seu email e senha quando entrar em contato com o suporte. Eles podem precisar 
+                    dessas informações para confirmar sua identidade.</p>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 8: Fazer Login</h2>
+                <p>Após o suporte liberar sua conta, você poderá fazer login:</p>
+
+                <ol>
+                    <li><strong>Acesse a página de login:</strong>
+                        <ul>
+                            <li>URL direta: <code>https://app.orbitsender.com/login</code></li>
+                            <li>Ou clique em "Ir para Login" na tela de confirmação</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Insira suas credenciais:</strong>
+                        <ul>
+                            <li><strong>Email:</strong> O mesmo email usado no cadastro</li>
+                            <li><strong>Senha:</strong> A senha que você criou</li>
+                        </ul>
+                    </li>
+
+                    <li><strong>Clique em "Entrar"</strong></li>
+                </ol>
+
+                <img src="images/01-login.png" alt="Página de login do OrbitSender" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <div class="warning-box">
+                    <strong>⚠️ Problema ao fazer login?</strong>
+                    <ul>
+                        <li>Certifique-se de que sua conta foi liberada pelo suporte</li>
+                        <li>Verifique se o email e senha estão corretos</li>
+                        <li>Se ainda não conseguir, entre em contato novamente com o suporte</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 9: Primeira vez no sistema</h2>
+                <p>Após fazer login pela primeira vez, você verá o Dashboard:</p>
+
+                <img src="images/03-dashboard.png" alt="Dashboard principal do OrbitSender" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>📋 Checklist inicial:</h3>
+                <ol>
+                    <li>✅ Explore o menu lateral para se familiarizar com as seções</li>
+                    <li>✅ Verifique se consegue acessar todas as seções do menu</li>
+                    <li>✅ Acesse a seção "Canais" para preparar a conexão do WhatsApp: <code>https://app.orbitsender.com/channels</code> (veja <a href="tutorial-canais.html">Conexão de Canais</a>)</li>
+                    <li>✅ Acesse "Configurações" para entender as opções disponíveis: <code>https://app.orbitsender.com/settings</code> (veja <a href="tutorial-configuracoes.html">Configurações</a>)</li>
+                    <li>✅ Explore a interface para se familiarizar</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 Recomendação:</strong>
+                    <p>Recomendamos usar o sistema pelo <strong>computador</strong> na primeira vez, pois facilita 
+                    a visualização e configuração. Após se familiarizar, você pode usar pelo celular se preferir.</p>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Resumo do Processo Completo</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Acessar registro</h3>
+                            <p>Acesse https://app.orbitsender.com/register</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Entrar na fila</h3>
+                            <p>Clique em "Entrar na Fila de Espera"</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Dados de acesso</h3>
+                            <p>Preencha email e senha (atenda todos os requisitos)</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Dados pessoais</h3>
+                            <p>Preencha nome completo e WhatsApp</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Dados da empresa</h3>
+                            <p>Preencha nome da empresa, CPF/CNPJ e tipo de negócio</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h3>Finalizar</h3>
+                            <p>Responda as perguntas e aceite os termos</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">7</div>
+                        <div class="step-content">
+                            <h3>Contatar suporte</h3>
+                            <p><strong>WhatsApp: (44) 9 9826-9363</strong></p>
+                            <p>Solicitar liberação da conta</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">8</div>
+                        <div class="step-content">
+                            <h3>Fazer login</h3>
+                            <p>Após liberação, faça login com email e senha</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Informações Importantes</h2>
+                <div class="tips-grid">
+                    <div class="tip-card tip-info">
+                        <h3>ℹ️ Credenciais de Acesso</h3>
+                        <ul>
+                            <li><strong>Email:</strong> Use o mesmo email cadastrado</li>
+                            <li><strong>Senha:</strong> A senha que você criou (não a perdemos)</li>
+                            <li>Guarde suas credenciais em local seguro</li>
+                            <li>Não compartilhe sua senha com ninguém</li>
+                        </ul>
+                    </div>
+
+                    <div class="tip-card tip-warning">
+                        <h3>⚠️ Sobre a Fila de Espera</h3>
+                        <ul>
+                            <li>É necessário entrar em contato com o suporte</li>
+                            <li>O suporte libera contas em ordem de solicitação</li>
+                            <li>Você receberá confirmação quando a conta for liberada</li>
+                            <li>Mantenha suas credenciais seguras enquanto aguarda</li>
+                        </ul>
+                    </div>
+
+                    <div class="tip-card tip-success">
+                        <h3>✅ Próximos Passos</h3>
+                        <ul>
+                            <li>Entre em contato com o suporte pelo WhatsApp</li>
+                            <li>Aguarde a liberação da conta</li>
+                            <li>Faça login após ser liberado</li>
+                            <li>Siga os próximos tutoriais para configurar</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Próximos tutoriais</h2>
+                <p>Agora que você aprendeu a criar a conta, siga para os próximos tutoriais:</p>
+                <ul>
+                    <li><a href="tutorial-canais.html" class="btn btn-primary">📱 Conectar seu primeiro canal</a></li>
+                    <li><a href="tutorial-configuracoes.html" class="btn btn-outline">⚙️ Configurar disparos</a></li>
+                    <li><a href="index.html" class="btn btn-outline">📚 Voltar ao índice</a></li>
+                </ul>
+            </div>
+            </div>
+
+            <footer class="footer">
+                <p>Documentação OrbitSender © 2025</p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

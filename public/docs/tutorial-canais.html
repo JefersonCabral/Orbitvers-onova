@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexão de Canais - OrbitSender</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="tutorial-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-logo">
+                    <span>🚀</span>
+                    <span>OrbitSender</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-nav-section">
+                    <h3>Documentação</h3>
+                    <a href="index.html" class="sidebar-nav-link">
+                        <span class="icon">🏠</span>
+                        <span>Início</span>
+                    </a>
+                </div>
+                <div class="sidebar-nav-section">
+                    <h3>Tutoriais</h3>
+                    <a href="tutorial-cadastro.html" class="sidebar-nav-link">
+                        <span class="icon">📝</span>
+                        <span>Cadastro e Login</span>
+                    </a>
+                    <a href="tutorial-canais.html" class="sidebar-nav-link active">
+                        <span class="icon">📱</span>
+                        <span>Conexão de Canais</span>
+                    </a>
+                    <a href="tutorial-configuracoes.html" class="sidebar-nav-link">
+                        <span class="icon">⚙️</span>
+                        <span>Configurações</span>
+                    </a>
+                    <a href="tutorial-segmentos.html" class="sidebar-nav-link">
+                        <span class="icon">👥</span>
+                        <span>Criação de Segmentos</span>
+                    </a>
+                    <a href="tutorial-quick-sender.html" class="sidebar-nav-link">
+                        <span class="icon">💬</span>
+                        <span>Quick Sender</span>
+                    </a>
+                </div>
+                <div class="sidebar-nav-section">
+                    <h3>Links Úteis</h3>
+                    <a href="index.html#dicas" class="sidebar-nav-link">
+                        <span class="icon">💡</span>
+                        <span>Dicas</span>
+                    </a>
+                    <a href="index.html#troubleshooting" class="sidebar-nav-link">
+                        <span class="icon">🔧</span>
+                        <span>Problemas Comuns</span>
+                    </a>
+                </div>
+                <div class="sidebar-nav-section">
+                    <h3>Acesso Rápido</h3>
+                    <a href="https://orbitsender.com/" target="_blank" rel="noopener noreferrer" class="sidebar-nav-link">
+                        <span class="icon">🌐</span>
+                        <span>Site OrbitSender</span>
+                    </a>
+                    <a href="https://app.orbitsender.com/" target="_blank" rel="noopener noreferrer" class="sidebar-nav-link">
+                        <span class="icon">🚀</span>
+                        <span>Acessar Sistema</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="tutorial-main">
+            <div class="tutorial-content">
+                <a href="index.html" class="back-button">← Voltar para início</a>
+
+                <div class="tutorial-header">
+                    <h1>📱 Conexão de Canais do WhatsApp</h1>
+                    <p>Tutorial completo passo a passo para criar e conectar seu primeiro canal via QR Code</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="quick-links">
+                    <h3>📚 Páginas Relacionadas</h3>
+                    <ul class="quick-links-list">
+                        <li><a href="tutorial-cadastro.html">📝 Cadastro e Login</a></li>
+                        <li><a href="tutorial-configuracoes.html">⚙️ Configurações de Disparo</a></li>
+                        <li><a href="tutorial-segmentos.html">👥 Criação de Segmentos</a></li>
+                        <li><a href="tutorial-quick-sender.html">💬 Quick Sender</a></li>
+                    </ul>
+                </div>
+
+                <div class="tutorial-step">
+                    <h2>O que são Canais?</h2>
+                    <p>Canais são seus números de WhatsApp conectados ao sistema OrbitSender. Cada canal representa um número que você usará para fazer disparos de mensagens para grupos do WhatsApp.</p>
+
+                    <div class="info-box">
+                        <strong>ℹ️ Informações Importantes:</strong>
+                        <ul>
+                            <li>Você pode conectar múltiplos números (canais) ao mesmo tempo</li>
+                            <li>Cada canal pode enviar mensagens independentemente</li>
+                            <li>Se você conectar múltiplos canais ao mesmo segmento, eles dividirão os grupos automaticamente</li>
+                            <li>O número usado para conexão deve ser diferente do número cadastrado no seu perfil (usado apenas para contato do suporte)</li>
+                            <li>Recomendamos usar o computador para criar e conectar o canal pela primeira vez</li>
+                        </ul>
+                    </div>
+                </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 1: Acessar o Dashboard</h2>
+                <p>Após fazer login no sistema, você será direcionado para o Dashboard. 
+                Você também pode acessar diretamente em: <code>https://app.orbitsender.com/dashboard</code></p>
+
+                <img src="images/02-02-dashboard-logado.png" alt="Dashboard inicial após login" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>O que você verá no Dashboard:</h3>
+                <ul>
+                    <li><strong>Guia de Início Rápido:</strong> Um card no topo com os primeiros passos</li>
+                    <li><strong>Menu Lateral:</strong> Com todas as seções do sistema</li>
+                    <li><strong>Estatísticas:</strong> Campanhas, Canais, Mensagens e Grupos (tudo zerado inicialmente)</li>
+                    <li><strong>Status de Conexão:</strong> No topo direito, mostrando "Desconectado" (até conectar um canal)</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Dica:</strong>
+                    <p>Se você ver o guia de início rápido, ele te direcionará diretamente para criar um canal. 
+                    Você pode seguir o guia ou acessar manualmente pelo menu lateral clicando em <strong>"Canais"</strong>.</p>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 2: Acessar a Seção de Canais</h2>
+                <p>Para criar e gerenciar seus canais, siga estes passos:</p>
+
+                <h3>2.1 Navegar até Canais</h3>
+                <ol>
+                    <li>No menu lateral, localize a opção <strong>"Canais"</strong> ou <strong>"Canais - Números de WhatsApp"</strong> e clique nela</li>
+                    <li>Ou acesse diretamente em: <code>https://app.orbitsender.com/channels</code></li>
+                    <li>Você será direcionado para a página de gerenciamento de canais</li>
+                </ol>
+
+                <img src="images/02-03-canais-lista-vazia.png" alt="Página de canais sem canais criados" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>2.2 Tela Inicial de Canais</h3>
+                <p>Na primeira vez, você verá uma tela vazia com:</p>
+                <ul>
+                    <li>Mensagem: <strong>"Nenhum canal encontrado"</strong></li>
+                    <li>Botão <strong>"Criar Canal"</strong> no centro</li>
+                    <li>Botão <strong>"Novo Canal"</strong> no canto superior direito</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Ambos os botões fazem a mesma coisa:</strong>
+                    <p>Você pode clicar em qualquer um dos botões para começar a criar um canal. 
+                    O resultado será o mesmo - abrir o modal de criação.</p>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 3: Criar um Novo Canal</h2>
+                <p>Vamos criar seu primeiro canal passo a passo:</p>
+
+                <h3>3.1 Abrir o Modal de Criação</h3>
+                <ol>
+                    <li>Clique no botão <strong>"Criar Canal"</strong> ou <strong>"Novo Canal"</strong></li>
+                    <li>Um modal será aberto na tela</li>
+                </ol>
+
+                <img src="images/02-05-modal-criar-canal.png" alt="Modal para criar novo canal" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>3.2 Preencher o Nome do Canal</h3>
+                <ol>
+                    <li>No campo <strong>"Nome do Canal"</strong>, digite um nome descritivo</li>
+                    <li>Exemplos: <code>Canal Principal</code>, <code>iPhone 15</code>, <code>Samsung</code>, <code>WhatsApp Empresarial</code></li>
+                    <li>O sistema formatará automaticamente o nome (removendo espaços e convertendo para minúsculas com hífens)</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 Formatação Automática:</strong>
+                    <p>O sistema formata automaticamente o nome do canal. Por exemplo:
+                    <ul>
+                        <li>Se você digitar: <code>Canal Principal Tutorial</code></li>
+                        <li>Será formatado para: <code>canal-principal-tutorial</code></li>
+                    </ul>
+                    Isso facilita a identificação e organização dos seus canais.
+                    </p>
+                </div>
+
+                <img src="images/02-06-nome-canal-preenchido.png" alt="Nome do canal preenchido e formatado" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>3.3 Escolher o Tipo de Conexão</h3>
+                <p>Você verá duas opções de conexão:</p>
+
+                <img src="images/02-07-qr-code-selecionado.png" alt="Opções de tipo de conexão: QR Code e Celular Virtual" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h4>Opção 1: QR Code (Recomendado para começar)</h4>
+                <ul>
+                    <li><strong>Velocidade:</strong> ⭐⭐⭐⭐⭐ (5/5)</li>
+                    <li><strong>Entrega:</strong> ⭐⭐⭐⭐⭐ (5/5)</li>
+                    <li><strong>Estabilidade:</strong> ⭐⭐⭐⭐⭐ (5/5)</li>
+                    <li><strong>Descrição:</strong> 📱 Conecte seu número através do QR Code</li>
+                </ul>
+
+                <h4>Opção 2: Celular Virtual</h4>
+                <ul>
+                    <li><strong>Velocidade:</strong> ⭐⭐⭐⭐⭐ (5/5)</li>
+                    <li><strong>Entrega:</strong> ⭐⭐⭐⭐⭐ (5/5)</li>
+                    <li><strong>Estabilidade:</strong> ⭐⭐⭐⭐⭐ (5/5)</li>
+                    <li><strong>Descrição:</strong> 📱 Conecte um novo número de WhatsApp</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>✅ Para este tutorial, vamos usar QR Code:</strong>
+                    <ol>
+                        <li>Clique na opção <strong>"QR Code"</strong></li>
+                        <li>Esta opção será destacada (selecionada)</li>
+                        <li>O botão <strong>"Criar"</strong> será habilitado</li>
+                    </ol>
+                </div>
+
+                <h3>3.4 Finalizar a Criação</h3>
+                <ol>
+                    <li>Após preencher o nome e selecionar o tipo de conexão (QR Code), clique no botão <strong>"Criar"</strong></li>
+                    <li>Aguarde alguns segundos enquanto o canal é criado</li>
+                    <li>O modal será fechado e você verá o canal criado na lista</li>
+                </ol>
+
+                <img src="images/02-08-qr-code-gerado.png" alt="Canal criado com sucesso" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <div class="success-box">
+                    <strong>✅ Canal Criado!</strong>
+                    <p>Após criar, você verá:</p>
+                    <ul>
+                        <li>Nome do canal (formatado)</li>
+                        <li>Tipo de conexão (QR Code)</li>
+                        <li>Status: <strong>"Pendente"</strong> (ainda não conectado)</li>
+                        <li>Token do canal</li>
+                        <li>Data de criação</li>
+                        <li>Botões de ação: <strong>"Novo QR Code"</strong>, <strong>"Editar"</strong>, <strong>"Excluir"</strong></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 4: Gerar e Escanear o QR Code</h2>
+                <p>Agora vamos conectar seu WhatsApp ao canal criado:</p>
+
+                <h3>4.1 Gerar o QR Code</h3>
+                <ol>
+                    <li>No card do canal criado, localize o botão <strong>"Novo QR Code"</strong></li>
+                    <li>Clique neste botão</li>
+                    <li>Um modal será aberto com o QR Code</li>
+                    <li>Aguarde alguns segundos enquanto o QR Code é gerado (você verá "Gerando QR Code...")</li>
+                </ol>
+
+                <img src="images/02-09-qr-code-modal.png" alt="Modal com QR Code gerado e instruções" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <div class="warning-box">
+                    <strong>⚠️ Importante:</strong>
+                    <p>O QR Code pode levar alguns segundos para ser gerado. Se aparecer "Gerando QR Code...", 
+                    aguarde alguns instantes. Não feche o modal.</p>
+                </div>
+
+                <h3>4.2 Instruções de Conexão</h3>
+                <p>O modal mostrará um QR Code grande e as seguintes instruções:</p>
+
+                <div class="info-box" style="background-color: rgba(59, 130, 246, 0.15); border-left: 4px solid var(--primary-color); padding: 1.5rem; border-radius: 8px; margin: 1.5rem 0;">
+                    <h4 style="color: var(--primary-color); margin-bottom: 1rem;">📱 Passo a Passo para Conectar:</h4>
+                    <ol style="margin-left: 1.5rem;">
+                        <li><strong>1.</strong> Abra o WhatsApp no seu celular.</li>
+                        <li><strong>2.</strong> Toque em mais opções (3 pontinhos) no Android, ou em configurações (Engrenagem) no iPhone.</li>
+                        <li><strong>3.</strong> Toque em "Dispositivos" conectados e, em seguida, em "Conectar dispositivo".</li>
+                        <li><strong>4.</strong> Escaneie o QR code para conectar!</li>
+                    </ol>
+                </div>
+
+                <h3>4.3 Escanear o QR Code com o WhatsApp</h3>
+                <ol>
+                    <li><strong>No seu celular:</strong>
+                        <ul>
+                            <li>Abra o aplicativo WhatsApp</li>
+                            <li>No Android: Toque nos 3 pontinhos (⋮) no canto superior direito</li>
+                            <li>No iPhone: Toque no ícone de Configurações (⚙️) no canto inferior direito</li>
+                        </ul>
+                    </li>
+                    <li><strong>Navegar até "Dispositivos conectados":</strong>
+                        <ul>
+                            <li>Toque em <strong>"Dispositivos conectados"</strong> ou <strong>"Aparelhos conectados"</strong></li>
+                        </ul>
+                    </li>
+                    <li><strong>Iniciar a conexão:</strong>
+                        <ul>
+                            <li>Toque em <strong>"Conectar um aparelho"</strong> ou <strong>"Conectar dispositivo"</strong></li>
+                            <li>A câmera do seu celular será ativada</li>
+                        </ul>
+                    </li>
+                    <li><strong>Escanear o QR Code:</strong>
+                        <ul>
+                            <li>Posicione o celular de forma que o QR Code na tela do computador fique visível pela câmera</li>
+                            <li>Aguarde o WhatsApp ler o código</li>
+                            <li>Você receberá uma confirmação no celular</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <div class="success-box">
+                    <strong>✅ Conexão Bem-Sucedida!</strong>
+                    <p>Quando conectado com sucesso:</p>
+                    <ul>
+                        <li>O status do canal mudará de <strong>"Pendente"</strong> para <strong>"Ativo"</strong></li>
+                        <li>O indicador no topo direito da tela mudará de "Desconectado" para "Conectado"</li>
+                        <li>Você verá informações sobre o número conectado no card do canal</li>
+                        <li>O modal do QR Code pode ser fechado (o canal já está conectado)</li>
+                    </ul>
+                </div>
+
+                <h3>4.4 Como Fica o Canal Após Conectado</h3>
+                <p>Após escanear o QR Code com sucesso, o canal ficará ativo. Veja como ele aparece na lista:</p>
+
+                <img src="images/02-10-canal-conectado-ativo.png" alt="Canal conectado e ativo na lista de canais" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h4>O que você verá:</h4>
+                <ul>
+                    <li><strong>Status no Card:</strong> O status do canal mostrará <strong>"Ativo"</strong> (em verde) ao invés de "Pendente"</li>
+                    <li><strong>Indicador no Topo:</strong> No canto superior direito da tela, você verá <strong>"Conectado"</strong> ao invés de "Desconectado"</li>
+                    <li><strong>Nome do Canal:</strong> Continua mostrando o nome que você definiu (ex: "canal-principal-tutorial")</li>
+                    <li><strong>Tipo de Conexão:</strong> Mostra "QR Code" como método de conexão</li>
+                    <li><strong>Informações do Canal:</strong>
+                        <ul>
+                            <li>Token do canal</li>
+                            <li>Data de criação</li>
+                        </ul>
+                    </li>
+                    <li><strong>Botões de Ação:</strong>
+                        <ul>
+                            <li><strong>"Desconectar"</strong> - Para desconectar o canal manualmente</li>
+                            <li><strong>"Ações"</strong> - Menu com opções adicionais (Editar, Excluir, etc.)</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="success-box">
+                    <strong>✅ Pronto para Usar!</strong>
+                    <p>Agora que seu canal está <strong>Ativo</strong> e <strong>Conectado</strong>, você já pode:</p>
+                    <ul>
+                        <li>✓ Criar segmentos e adicionar grupos (veja <a href="tutorial-segmentos.html">Criação de Segmentos</a>)</li>
+                        <li>✓ Fazer disparos usando o Quick Sender (veja <a href="tutorial-quick-sender.html">Quick Sender</a>)</li>
+                        <li>✓ Configurar as taxas de envio (veja <a href="tutorial-configuracoes.html">Configurações</a>)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Status dos Canais</h2>
+                <p>Entenda os diferentes status que um canal pode ter:</p>
+
+                <div class="tips-grid">
+                    <div class="tip-card tip-success">
+                        <h3>🟢 Ativo</h3>
+                        <p>Canal conectado e pronto para usar. Você pode fazer disparos normalmente.</p>
+                    </div>
+
+                    <div class="tip-card tip-warning">
+                        <h3>🟡 Pendente</h3>
+                        <p>Aguardando conexão via QR Code. O canal foi criado mas ainda não foi conectado ao WhatsApp.</p>
+                    </div>
+
+                    <div class="tip-card tip-error">
+                        <h3>🔴 Inativo</h3>
+                        <p>Canal desconectado ou com problemas. Clique em "Novo QR Code" para reconectar.</p>
+                    </div>
+
+                    <div class="tip-card tip-info">
+                        <h3>🔵 Sincronizando</h3>
+                        <p>O canal está se conectando ou atualizando informações. Aguarde alguns instantes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Problemas Comuns e Soluções</h2>
+
+                <h3>❌ QR Code não está sendo lido pelo WhatsApp</h3>
+                <div class="warning-box">
+                    <strong>Solução Passo a Passo:</strong>
+                    <ol>
+                        <li>Feche completamente o aplicativo WhatsApp no celular</li>
+                        <li>Abra o WhatsApp novamente</li>
+                        <li>Feche o modal do QR Code no sistema (clique no X no canto superior direito)</li>
+                        <li>Clique em <strong>"Novo QR Code"</strong> novamente no card do canal</li>
+                        <li>Aguarde o QR Code ser gerado novamente</li>
+                        <li>Tente escanear novamente seguindo as instruções</li>
+                    </ol>
+                </div>
+
+                <h3>❌ Mensagem "Não sincroniza" ou "Sem internet" no WhatsApp</h3>
+                <div class="warning-box">
+                    <strong>Isso pode acontecer mesmo com internet funcionando:</strong>
+                    <ol>
+                        <li>Reinicie o celular completamente (desligue e ligue novamente)</li>
+                        <li>Certifique-se de que o WhatsApp está atualizado na loja de aplicativos</li>
+                        <li>Feche e abra o modal do QR Code no sistema</li>
+                        <li>Gere um novo QR Code (clique em "Novo QR Code")</li>
+                        <li>Se o problema persistir, tente usar outro dispositivo para escanear</li>
+                        <li>Como último recurso, crie um novo canal com nome diferente</li>
+                    </ol>
+
+                    <p><strong>Importante:</strong> Este tipo de erro geralmente é um bug temporário do WhatsApp, 
+                    não do sistema OrbitSender. Aguarde alguns minutos e tente novamente.</p>
+                </div>
+
+                <h3>❌ QR Code apareceu e sumiu rapidamente</h3>
+                <div class="warning-box">
+                    <strong>Solução:</strong>
+                    <ol>
+                        <li>Recarregue a página do sistema (F5 ou Ctrl+R)</li>
+                        <li>Clique novamente em "Novo QR Code"</li>
+                        <li>Se persistir, crie um novo canal com nome diferente</li>
+                        <li>Certifique-se de que você tem uma conexão estável com a internet</li>
+                    </ol>
+                </div>
+
+                <h3>❌ Botão "Criar" não aparece ou está desabilitado</h3>
+                <div class="warning-box">
+                    <strong>Possíveis causas e soluções:</strong>
+                    <ul>
+                        <li><strong>Nome do canal vazio:</strong> Preencha o campo "Nome do Canal"</li>
+                        <li><strong>Tipo de conexão não selecionado:</strong> Clique em uma das opções (QR Code ou Celular Virtual)</li>
+                        <li><strong>Está no celular:</strong> Desça a página para encontrar o botão, ou acesse pelo computador (recomendado)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Desconexão e Reconexão</h2>
+                <p>Se seu canal desconectar (status mudar para "Inativo"), siga estes passos para reconectar:</p>
+
+                <div class="warning-box">
+                    <strong>⚠️ Desconexão Automática:</strong>
+                    <p>Por medidas de segurança durante os testes, as conexões podem ser desconectadas automaticamente 
+                    após um período. Se isso acontecer, não se preocupe - é normal e fácil de resolver.</p>
+                </div>
+
+                <h3>Como Reconectar:</h3>
+                <ol>
+                    <li>Acesse a página de <strong>Canais</strong> (<code>https://app.orbitsender.com/channels</code>)</li>
+                    <li>Localize o canal desconectado na lista</li>
+                    <li>Clique no botão <strong>"Novo QR Code"</strong></li>
+                    <li>Siga o mesmo processo de escanear o QR Code novamente</li>
+                    <li>Aguarde o status mudar para <strong>"Ativo"</strong></li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 Dica:</strong>
+                    <p>Você pode usar o mesmo número do WhatsApp para reconectar. Não é necessário criar um novo canal.</p>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Múltiplos Canais</h2>
+                <p>Você pode conectar vários números ao mesmo tempo para aumentar a capacidade de disparo:</p>
+
+                <h3>Como Criar Múltiplos Canais:</h3>
+                <ol>
+                    <li>Crie um novo canal para cada número (siga o mesmo processo)</li>
+                    <li>Dê nomes diferentes para cada canal para facilitar a identificação</li>
+                    <li>Conecte cada um via QR Code separadamente</li>
+                    <li>Todos aparecerão na lista de canais</li>
+                </ol>
+
+                <h3>Vantagens de Usar Múltiplos Canais:</h3>
+                <ul>
+                    <li><strong>Maior velocidade:</strong> Mais canais = mais mensagens enviadas simultaneamente</li>
+                    <li><strong>Distribuição automática:</strong> Quando você usa múltiplos canais no mesmo segmento, o sistema distribui os grupos de forma igualitária entre eles</li>
+                    <li><strong>Redundância:</strong> Se um canal desconectar, os outros continuam funcionando</li>
+                    <li><strong>Flexibilidade:</strong> Você pode usar canais diferentes para diferentes tipos de mensagens ou segmentos</li>
+                </ul>
+
+                <div class="info-box">
+                    <strong>💡 Dica Importante:</strong>
+                    <p>Cada canal deve usar um número de WhatsApp diferente. Você não pode conectar o mesmo número 
+                    em múltiplos canais simultaneamente.</p>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Resumo do Processo Completo</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Fazer Login</h3>
+                            <p>Entre no sistema com suas credenciais</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Acessar Canais</h3>
+                            <p>No menu lateral, clique em "Canais" ou acesse diretamente: <code>https://app.orbitsender.com/channels</code></p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Criar Canal</h3>
+                            <p>Clique em "Novo Canal" ou "Criar Canal"</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Preencher Nome</h3>
+                            <p>Digite um nome descritivo para o canal</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Selecionar QR Code</h3>
+                            <p>Escolha a opção "QR Code" como tipo de conexão</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h3>Criar Canal</h3>
+                            <p>Clique no botão "Criar"</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">7</div>
+                        <div class="step-content">
+                            <h3>Gerar QR Code</h3>
+                            <p>Clique em "Novo QR Code" no canal criado</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">8</div>
+                        <div class="step-content">
+                            <h3>Escanear QR Code</h3>
+                            <p>Use o WhatsApp do celular para escanear o código</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">9</div>
+                        <div class="step-content">
+                            <h3>Confirmar Conexão</h3>
+                            <p>Aguarde o status mudar para "Ativo"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Próximos Passos</h2>
+                <p>Após conectar seu canal com sucesso, você está pronto para:</p>
+                <ul>
+                    <li><a href="tutorial-configuracoes.html" class="btn btn-primary">⚙️ Configurar taxas de disparo</a></li>
+                    <li><a href="tutorial-segmentos.html" class="btn btn-outline">👥 Criar seu primeiro segmento</a></li>
+                    <li><a href="tutorial-quick-sender.html" class="btn btn-outline">📤 Fazer seu primeiro envio rápido</a></li>
+                    <li><a href="index.html" class="btn btn-outline">📚 Voltar ao índice</a></li>
+                </ul>
+            </div>
+            </div>
+
+            <footer class="footer">
+                <p>Documentação OrbitSender © 2025</p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

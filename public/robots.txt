@@ -1,0 +1,30 @@
+# robots.txt para OrbitSender
+# https://orbitsender.com/robots.txt
+
+User-agent: *
+Allow: /
+Allow: /#sobre
+Allow: /#contato
+Allow: /#roadmap
+Allow: /#privacidade
+Allow: /#termos
+Allow: /#lgpd
+Allow: /#hero
+Allow: /#diferenciais
+Allow: /#funcionalidades
+Allow: /#precos
+Allow: /#faq
+Allow: /#depoimentos
+
+# Bloquear recursos desnecessários
+Disallow: /api/
+Disallow: /stats/
+Disallow: /*.json$
+Disallow: /node_modules/
+
+# Sitemap
+Sitemap: https://orbitsender.com/sitemap.xml
+
+# Crawl-delay (opcional)
+Crawl-delay: 1
+

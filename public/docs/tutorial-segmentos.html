@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Segmentos - OrbitSender</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="tutorial-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-logo">
+                    <span>🚀</span>
+                    <span>OrbitSender</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-nav-section">
+                    <h3>Documentação</h3>
+                    <a href="index.html" class="sidebar-nav-link">
+                        <span class="icon">🏠</span>
+                        <span>Início</span>
+                    </a>
+                </div>
+                <div class="sidebar-nav-section">
+                    <h3>Tutoriais</h3>
+                    <a href="tutorial-cadastro.html" class="sidebar-nav-link">
+                        <span class="icon">📝</span>
+                        <span>Cadastro e Login</span>
+                    </a>
+                    <a href="tutorial-canais.html" class="sidebar-nav-link">
+                        <span class="icon">📱</span>
+                        <span>Conexão de Canais</span>
+                    </a>
+                    <a href="tutorial-configuracoes.html" class="sidebar-nav-link">
+                        <span class="icon">⚙️</span>
+                        <span>Configurações</span>
+                    </a>
+                    <a href="tutorial-segmentos.html" class="sidebar-nav-link active">
+                        <span class="icon">👥</span>
+                        <span>Criação de Segmentos</span>
+                    </a>
+                    <a href="tutorial-quick-sender.html" class="sidebar-nav-link">
+                        <span class="icon">💬</span>
+                        <span>Quick Sender</span>
+                    </a>
+                </div>
+                <div class="sidebar-nav-section">
+                    <h3>Links Úteis</h3>
+                    <a href="index.html#dicas" class="sidebar-nav-link">
+                        <span class="icon">💡</span>
+                        <span>Dicas</span>
+                    </a>
+                    <a href="index.html#troubleshooting" class="sidebar-nav-link">
+                        <span class="icon">🔧</span>
+                        <span>Problemas Comuns</span>
+                    </a>
+                </div>
+                <div class="sidebar-nav-section">
+                    <h3>Acesso Rápido</h3>
+                    <a href="https://orbitsender.com/" target="_blank" rel="noopener noreferrer" class="sidebar-nav-link">
+                        <span class="icon">🌐</span>
+                        <span>Site OrbitSender</span>
+                    </a>
+                    <a href="https://app.orbitsender.com/" target="_blank" rel="noopener noreferrer" class="sidebar-nav-link">
+                        <span class="icon">🚀</span>
+                        <span>Acessar Sistema</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="tutorial-main">
+            <div class="tutorial-content">
+                <a href="index.html" class="back-button">← Voltar para início</a>
+
+                <div class="tutorial-header">
+                    <h1>👥 Criação de Segmentos</h1>
+                    <p>Tutorial completo passo a passo para criar e gerenciar segmentos de grupos do WhatsApp</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="quick-links">
+                    <h3>📚 Páginas Relacionadas</h3>
+                    <ul class="quick-links-list">
+                        <li><a href="tutorial-canais.html">📱 Conexão de Canais</a></li>
+                        <li><a href="tutorial-configuracoes.html">⚙️ Configurações de Disparo</a></li>
+                        <li><a href="tutorial-quick-sender.html">💬 Quick Sender</a></li>
+                        <li><a href="index.html#dicas">💡 Dicas Importantes</a></li>
+                    </ul>
+                </div>
+
+                <div class="tutorial-step">
+                    <h2>Por que criar segmentos?</h2>
+                    <p>Os segmentos são uma forma de organizar grupos do WhatsApp de maneira eficiente:</p>
+
+                    <ul>
+                        <li><strong>Organização:</strong> Agrupe grupos por tema, categoria ou fonte</li>
+                        <li><strong>Facilidade:</strong> Não precisa selecionar grupos toda vez que for fazer um disparo</li>
+                        <li><strong>Eficiência:</strong> Crie uma vez e use várias vezes</li>
+                        <li><strong>Filtragem:</strong> Filtre grupos por nome ou prefixo rapidamente</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <strong>💡 Exemplo prático:</strong>
+                        <p>Se você tem 50 grupos com o prefixo "Teste SaaS", você pode criar um segmento 
+                        chamado "Segmento Teste SaaS" selecionando apenas esses 4 primeiros grupos. 
+                        Assim, quando for fazer um disparo, você só precisa selecionar o segmento ao invés 
+                        de escolher os grupos um por um.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 1: Acessar a Página de Segmentos</h2>
+                <p>Para criar um novo segmento:</p>
+
+                <h3>1.1 Navegar até Segmentos</h3>
+                <ol>
+                    <li>No menu lateral esquerdo, localize a opção <strong>"Segmentos"</strong> e clique nela</li>
+                    <li>Ou acesse diretamente em: <code>https://app.orbitsender.com/segments</code></li>
+                    <li>Você será direcionado para a página de segmentos</li>
+                </ol>
+
+                <img src="images/04-01-segmentos-inicial.png" alt="Página inicial de segmentos do OrbitSender" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>1.2 Iniciar Criação</h3>
+                <ol>
+                    <li>Na página de segmentos, localize o botão <strong>"Novo Segmento"</strong> (geralmente no canto superior direito)</li>
+                    <li>Clique no botão para iniciar o processo de criação</li>
+                    <li>Você será direcionado para o assistente de criação de segmentos</li>
+                </ol>
+
+                <img src="images/04-02-criar-segmento-step1.png" alt="Assistente de criação de segmentos - Passo 1" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <p>O assistente possui 4 passos principais:</p>
+                <ol>
+                    <li><strong>Selecionar Canais:</strong> Escolher quais canais usar</li>
+                    <li><strong>Selecionar Grupos:</strong> Escolher quais grupos incluir</li>
+                    <li><strong>Informações:</strong> Dar um nome ao segmento</li>
+                    <li><strong>Monitorar Grupo:</strong> Configuração opcional de monitoramento</li>
+                </ol>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 2: Selecionar o Canal</h2>
+                <p>O primeiro passo é selecionar qual canal (número de WhatsApp) você quer usar para este segmento:</p>
+
+                <h3>2.1 Visualizar Canais Disponíveis</h3>
+                <ol>
+                    <li>Na etapa 1, você verá uma lista de canais disponíveis</li>
+                    <li>Cada canal mostra seu nome e status (Disponível ou Indisponível)</li>
+                    <li>Canais com campanhas ativas aparecem como indisponíveis</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 Dica:</strong>
+                    <p>Você pode selecionar um ou múltiplos canais. Se selecionar múltiplos canais e 
+                    eles estiverem no mesmo grupo, o sistema fará a divisão igualitária entre eles 
+                    automaticamente.</p>
+                </div>
+
+                <h3>2.2 Selecionar o Canal</h3>
+                <ol>
+                    <li>Localize o canal que você deseja usar (ex: "canal-principal-tutorial")</li>
+                    <li>Clique na checkbox ao lado do nome do canal para selecioná-lo</li>
+                    <li>O botão <strong>"Próximo"</strong> será habilitado quando pelo menos um canal for selecionado</li>
+                </ol>
+
+                <img src="images/04-03-canal-selecionado.png" alt="Canal selecionado com checkbox marcado" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>2.3 Avançar para o Próximo Passo</h3>
+                <ol>
+                    <li>Após selecionar o canal, clique no botão <strong>"Próximo"</strong> na parte inferior da página</li>
+                    <li>O sistema iniciará a sincronização para carregar os grupos do canal selecionado</li>
+                </ol>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 3: Aguardar Sincronização dos Grupos</h2>
+                <p><strong>⚠️ IMPORTANTE:</strong> Quando você clicar em "Próximo", o sistema começará a sincronizar os grupos do canal.</p>
+
+                <h3>3.1 Processo de Sincronização</h3>
+                <ol>
+                    <li>Após clicar em "Próximo", você verá uma tela de <strong>"Sincronizando..."</strong></li>
+                    <li>O sistema está buscando todos os grupos do WhatsApp no canal selecionado</li>
+                    <li><strong>Aguarde aproximadamente 30 segundos</strong> para garantir que todos os grupos sejam carregados</li>
+                </ol>
+
+                <img src="images/04-04-sincronizando-grupos.png" alt="Tela de sincronização de grupos" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <div class="warning-box">
+                    <strong>⚠️ Atenção:</strong>
+                    <p><strong>Não clique em "Próximo" ou feche a página durante a sincronização.</strong> 
+                    Aguarde até que apareça a mensagem "Concluído" ou até que os grupos sejam exibidos 
+                    na tela. A sincronização pode levar de 20 a 40 segundos dependendo da quantidade 
+                    de grupos no seu WhatsApp.</p>
+                </div>
+
+                <h3>3.2 Verificar Sincronização Concluída</h3>
+                <p>Você saberá que a sincronização terminou quando:</p>
+                <ul>
+                    <li>Ver o status <strong>"Concluído"</strong> na seção de status</li>
+                    <li>Ver a mensagem indicando quantos grupos foram carregados (ex: "365 grupos carregados")</li>
+                    <li>Ver a lista de grupos aparecer na tela</li>
+                </ul>
+
+                <img src="images/04-05-grupos-carregados.png" alt="Grupos carregados após sincronização" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 4: Filtrar e Selecionar Grupos</h2>
+                <p>Após os grupos serem carregados, você pode filtrá-los e selecionar os que deseja incluir no segmento:</p>
+
+                <h3>4.1 Usar o Campo de Busca</h3>
+                <ol>
+                    <li>Localize o campo de busca com o placeholder <strong>"Buscar grupos..."</strong></li>
+                    <li>Digite o nome ou prefixo dos grupos que você deseja filtrar</li>
+                    <li>Por exemplo, se você quer grupos que começam com "Teste SaaS", digite <strong>"Teste SaaS"</strong></li>
+                    <li>A lista de grupos será filtrada automaticamente conforme você digita</li>
+                </ol>
+
+                <img src="images/04-06-filtro-teste-saas.png" alt="Campo de busca para filtrar grupos" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <div class="info-box">
+                    <strong>💡 Dica:</strong>
+                    <p>O campo de busca funciona em tempo real. Conforme você digita, a lista é filtrada 
+                    automaticamente mostrando apenas os grupos que contêm o texto digitado no nome.</p>
+                </div>
+
+                <h3>4.2 Verificar Grupos Filtrados</h3>
+                <p>Após aplicar o filtro, você verá apenas os grupos que correspondem ao critério de busca:</p>
+
+                <img src="images/04-07-filtro-aplicado.png" alt="Lista de grupos filtrados por 'Teste SaaS'" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <p>No exemplo acima, foram filtrados todos os grupos que contêm "Teste SaaS" no nome, 
+                mostrando grupos como "Teste SaaS #02", "Teste SaaS #03", etc.</p>
+
+                <h3>4.3 Selecionar os Grupos Desejados</h3>
+                <ol>
+                    <li>Após filtrar os grupos, selecione os que deseja incluir no segmento</li>
+                    <li>Clique na checkbox ao lado de cada grupo para selecioná-lo</li>
+                    <li>Você pode selecionar um ou vários grupos ao mesmo tempo</li>
+                    <li>O contador no topo mostra quantos grupos estão selecionados (ex: "4 grupos selecionados de 365 disponíveis")</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>💡 Exemplo:</strong>
+                    <p>Se você quer criar um segmento com os 4 primeiros grupos "Teste SaaS", 
+                    você pode filtrar por "Teste SaaS" e selecionar os primeiros 4 grupos da lista 
+                    (Teste SaaS #02, #03, #04 e #05).</p>
+                </div>
+
+                <img src="images/04-08-4-grupos-selecionados.png" alt="4 grupos selecionados para o segmento" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>4.4 Avançar para Informações</h3>
+                <ol>
+                    <li>Após selecionar os grupos desejados, clique no botão <strong>"Próximo"</strong></li>
+                    <li>Você será direcionado para a etapa 3 (Informações do Segmento)</li>
+                </ol>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 5: Preencher Informações do Segmento</h2>
+                <p>Na etapa 3, você precisará dar um nome ao seu segmento:</p>
+
+                <h3>5.1 Visualizar Resumo</h3>
+                <p>Na tela de informações, você verá um resumo do que foi selecionado:</p>
+                <ul>
+                    <li>Quantos canais foram selecionados (ex: "1 Canais Selecionados")</li>
+                    <li>Quantos grupos foram selecionados (ex: "4 Grupos Selecionados")</li>
+                    <li>Total de grupos disponíveis no canal</li>
+                </ul>
+
+                <img src="images/04-09-step3-informacoes.png" alt="Tela de informações do segmento com resumo" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>5.2 Preencher Nome do Segmento</h3>
+                <ol>
+                    <li>Localize o campo <strong>"Nome do Segmento"</strong></li>
+                    <li>Digite um nome descritivo que facilite a identificação do segmento</li>
+                    <li>Exemplos de nomes:
+                        <ul>
+                            <li>"Segmento Teste SaaS"</li>
+                            <li>"Grupos de Tecnologia"</li>
+                            <li>"Promoções Shopee"</li>
+                            <li>"Grupos Premium"</li>
+                        </ul>
+                    </li>
+                    <li>O botão "Próximo" será habilitado quando você preencher o nome</li>
+                </ol>
+
+                <img src="images/04-10-nome-preenchido.png" alt="Nome do segmento preenchido" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <div class="info-box">
+                    <strong>💡 Dica para o nome:</strong>
+                    <ul>
+                        <li>Use nomes descritivos que você lembre facilmente</li>
+                        <li>Se você tiver muitos segmentos, isso facilita encontrá-los</li>
+                        <li>Ex: "Segmento Teste SaaS" indica claramente que são grupos relacionados ao prefixo "Teste SaaS"</li>
+                    </ul>
+                </div>
+
+                <h3>5.3 Avançar para Monitoramento</h3>
+                <ol>
+                    <li>Após preencher o nome, clique no botão <strong>"Próximo"</strong></li>
+                    <li>Você será direcionado para a etapa 4 (Monitorar Grupo)</li>
+                </ol>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 6: Configurar Monitoramento (Opcional)</h2>
+                <p>A etapa 4 é sobre monitoramento de grupos, uma funcionalidade opcional:</p>
+
+                <h3>6.1 Entender o Monitoramento</h3>
+                <p>O monitoramento permite acompanhar atividades específicas de um grupo selecionado. 
+                No entanto, esta é uma funcionalidade avançada que pode ser configurada posteriormente.</p>
+
+                <img src="images/04-11-step4-monitoramento.png" alt="Tela de configuração de monitoramento de grupos" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <h3>6.2 Pular a Etapa de Monitoramento</h3>
+                <ol>
+                    <li>Na tela de monitoramento, você verá duas opções:
+                        <ul>
+                            <li><strong>"Sim, quero monitorar"</strong> - Para configurar monitoramento</li>
+                            <li><strong>"Não, pular esta etapa"</strong> - Para não configurar monitoramento agora</li>
+                        </ul>
+                    </li>
+                    <li>Para criar o segmento sem monitoramento, clique em <strong>"Não, pular esta etapa"</strong></li>
+                    <li>Ao clicar nesta opção, o segmento será criado automaticamente</li>
+                </ol>
+
+                <div class="info-box">
+                    <strong>ℹ️ Nota:</strong>
+                    <p>Você pode ativar o monitoramento posteriormente editando o segmento. 
+                    Por enquanto, recomendamos pular esta etapa para manter o processo simples.</p>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Passo 7: Verificar Segmento Criado</h2>
+                <p>Após clicar em "Não, pular esta etapa", o segmento será criado automaticamente e você será redirecionado para a página de segmentos 
+                (<code>https://app.orbitsender.com/segments</code>):</p>
+
+                <h3>7.1 Segmento Criado com Sucesso</h3>
+                <p>Você verá o novo segmento na lista de segmentos com:</p>
+                <ul>
+                    <li><strong>Nome do segmento</strong> (ex: "Segmento Teste SaaS")</li>
+                    <li><strong>Quantidade de canais</strong> utilizados (ex: "1 canais")</li>
+                    <li><strong>Quantidade de grupos</strong> incluídos (ex: "4 grupos")</li>
+                    <li><strong>Status dos canais</strong> com marcação de verificado</li>
+                </ul>
+
+                <img src="images/04-13-segmento-criado-com-sucesso.png" alt="Segmento criado com sucesso na lista de segmentos" class="tutorial-step img" style="max-width: 100%; border-radius: 8px; margin: 1rem 0; border: 1px solid var(--border-color);">
+
+                <div class="success-box">
+                    <strong>✅ Parabéns!</strong>
+                    <p>Seu segmento foi criado com sucesso! Agora você pode usar este segmento no 
+                    <a href="tutorial-quick-sender.html">Quick Sender</a> ou ao criar campanhas. Os grupos selecionados estão salvos e não 
+                    precisam ser selecionados novamente.</p>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Resumo do Processo Completo</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3>Acessar Segmentos</h3>
+                            <p>No menu lateral, clique em "Segmentos" (<code>https://app.orbitsender.com/segments</code>) e depois em "Novo Segmento"</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3>Selecionar Canal</h3>
+                            <p>Selecione o canal desejado marcando a checkbox e clique em "Próximo"</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3>Aguardar Sincronização</h3>
+                            <p>Aguarde cerca de 30 segundos para o sistema carregar os grupos</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3>Filtrar Grupos</h3>
+                            <p>Use o campo de busca para filtrar grupos por nome ou prefixo</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <h3>Selecionar Grupos</h3>
+                            <p>Marque as checkboxes dos grupos que deseja incluir no segmento</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">6</div>
+                        <div class="step-content">
+                            <h3>Preencher Nome</h3>
+                            <p>Digite um nome descritivo para o segmento e clique em "Próximo"</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">7</div>
+                        <div class="step-content">
+                            <h3>Pular Monitoramento</h3>
+                            <p>Clique em "Não, pular esta etapa" para finalizar sem monitoramento</p>
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">8</div>
+                        <div class="step-content">
+                            <h3>Segmento Criado!</h3>
+                            <p>Verifique o segmento na lista e comece a usá-lo em seus disparos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Gerenciando Segmentos</h2>
+                <p>Na página de segmentos (<code>https://app.orbitsender.com/segments</code>), você pode realizar as seguintes ações:</p>
+
+                <div class="tips-grid">
+                    <div class="tip-card tip-info">
+                        <h3>📋 Ver Detalhes</h3>
+                        <p>Clique no botão "Ver detalhes" para ver informações completas sobre o segmento, incluindo lista de grupos e canais.</p>
+                    </div>
+
+                    <div class="tip-card tip-warning">
+                        <h3>🔄 Revalidar Grupos</h3>
+                        <p>Use o botão "Revalidar grupos" para atualizar a lista de grupos caso você tenha adicionado ou removido grupos do WhatsApp.</p>
+                    </div>
+
+                    <div class="tip-card tip-error">
+                        <h3>🗑️ Excluir</h3>
+                        <p>Clique em "Excluir" para remover um segmento que não usa mais. Esta ação não pode ser desfeita.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Dicas e Boas Práticas</h2>
+
+                <div class="tips-grid">
+                    <div class="tip-card tip-success">
+                        <h3>✅ Boas Práticas</h3>
+                        <ul>
+                            <li><strong>Use nomes descritivos:</strong> Facilite a identificação do segmento</li>
+                            <li><strong>Organize por categoria:</strong> Agrupe grupos similares juntos</li>
+                            <li><strong>Selecione grupos relevantes:</strong> Escolha apenas grupos que você realmente usa</li>
+                            <li><strong>Mantenha atualizado:</strong> Revalide grupos periodicamente</li>
+                            <li><strong>Use filtros:</strong> Aproveite o campo de busca para encontrar grupos rapidamente</li>
+                        </ul>
+                    </div>
+
+                    <div class="tip-card tip-warning">
+                        <h3>⚠️ O que evitar</h3>
+                        <ul>
+                            <li><strong>Não interrompa sincronização:</strong> Aguarde os grupos carregarem completamente</li>
+                            <li><strong>Não crie segmentos muito grandes:</strong> Isso pode tornar a seleção lenta</li>
+                            <li><strong>Não use nomes genéricos:</strong> Isso dificulta encontrar segmentos depois</li>
+                            <li><strong>Não esqueça de selecionar grupos:</strong> Um segmento sem grupos não é útil</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tutorial-step">
+                <h2>Próximos Passos</h2>
+                <p>Agora que você criou seu segmento, está pronto para fazer disparos:</p>
+                <ul>
+                    <li><a href="tutorial-quick-sender.html" class="btn btn-primary">💬 Usar Quick Sender com segmento</a></li>
+                    <li><a href="tutorial-configuracoes.html" class="btn btn-outline">⚙️ Configurar taxas de disparo</a></li>
+                    <li><a href="index.html" class="btn btn-outline">📚 Voltar ao índice</a></li>
+                </ul>
+            </div>
+            </div>
+
+            <footer class="footer">
+                <p>Documentação OrbitSender © 2025</p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

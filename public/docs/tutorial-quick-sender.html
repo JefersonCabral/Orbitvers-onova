@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Sender - OrbitSender</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="tutorial-wrapper">
+        <!-- Sidebar Navigation -->
+        <aside class="tutorial-sidebar">
+            <div class="sidebar-header">
+                <a href="index.html" class="sidebar-logo">
+                    <span>🚀</span>
+                    <span>OrbitSender</span>
+                </a>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="sidebar-nav-section">
+                    <h3>Documentação</h3>
+                    <a href="index.html" class="sidebar-nav-link">
+                        <span class="icon">🏠</span>
+                        <span>Início</span>
+                    </a>
+                </div>
+                <div class="sidebar-nav-section">
+                    <h3>Tutoriais</h3>
+                    <a href="tutorial-cadastro.html" class="sidebar-nav-link">
+                        <span class="icon">📝</span>
+                        <span>Cadastro e Login</span>
+                    </a>
+                    <a href="tutorial-canais.html" class="sidebar-nav-link">
+                        <span class="icon">📱</span>
+                        <span>Conexão de Canais</span>
+                    </a>
+                    <a href="tutorial-configuracoes.html" class="sidebar-nav-link">
+                        <span class="icon">⚙️</span>
+                        <span>Configurações</span>
+                    </a>
+                    <a href="tutorial-segmentos.html" class="sidebar-nav-link">
+                        <span class="icon">👥</span>
+                        <span>Criação de Segmentos</span>
+                    </a>
+                    <a href="tutorial-quick-sender.html" class="sidebar-nav-link active">
+                        <span class="icon">💬</span>
+                        <span>Quick Sender</span>
+                    </a>
+                </div>
+                <div class="sidebar-nav-section">
+                    <h3>Links Úteis</h3>
+                    <a href="index.html#dicas" class="sidebar-nav-link">
+                        <span class="icon">💡</span>
+                        <span>Dicas</span>
+                    </a>
+                    <a href="index.html#troubleshooting" class="sidebar-nav-link">
+                        <span class="icon">🔧</span>
+                        <span>Problemas Comuns</span>
+                    </a>
+                </div>
+                <div class="sidebar-nav-section">
+                    <h3>Acesso Rápido</h3>
+                    <a href="https://orbitsender.com/" target="_blank" rel="noopener noreferrer" class="sidebar-nav-link">
+                        <span class="icon">🌐</span>
+                        <span>Site OrbitSender</span>
+                    </a>
+                    <a href="https://app.orbitsender.com/" target="_blank" rel="noopener noreferrer" class="sidebar-nav-link">
+                        <span class="icon">🚀</span>
+                        <span>Acessar Sistema</span>
+                    </a>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="tutorial-main">
+            <div class="tutorial-content">
+                <a href="index.html" class="back-button">← Voltar para início</a>
+
+                <div class="tutorial-header">
+                    <h1>💬 Quick Sender - Enviar Primeira Campanha</h1>
+                    <p>Tutorial completo passo a passo para enviar sua primeira campanha usando o Quick Sender</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="quick-links">
+                    <h3>📚 Páginas Relacionadas</h3>
+                    <ul class="quick-links-list">
+                        <li><a href="tutorial-segmentos.html">👥 Criação de Segmentos</a></li>
+                        <li><a href="tutorial-configuracoes.html">⚙️ Configurações de Disparo</a></li>
+                        <li><a href="tutorial-canais.html">📱 Conexão de Canais</a></li>
+                        <li><a href="index.html#dicas">💡 Dicas Importantes</a></li>
+                    </ul>
+                </div>
+
+                <div class="tutorial-step">
+                    <h2>O que é o Quick Sender?</h2>
+                    <p>O Quick Sender é uma funcionalidade que permite fazer disparos rápidos de forma intuitiva e eficiente, como um chat. É ideal para:</p>
+
+                    <ul>
+                        <li><strong>Disparos rápidos:</strong> Enviar mensagens de forma imediata sem precisar criar uma campanha completa</li>
+                        <li><strong>Simplicidade:</strong> Interface similar a um chat, fácil de usar</li>
+                        <li><strong>Eficiência:</strong> Processo rápido e direto para enviar mensagens</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <strong>ℹ️ Pré-requisitos:</strong>
+                        <p>Antes de usar o Quick Sender, certifique-se de ter:</p>
+                        <ul>
+                            <li>Um canal conectado e ativo (veja <a href="tutorial-canais.html">Conexão de Canais</a>)</li>
+                            <li>Pelo menos um segmento criado (veja <a href="tutorial-segmentos.html">Criação de Segmentos</a>)</li>
+                            <li>Configurações de disparo ajustadas (veja <a href="tutorial-configuracoes.html">Configurações</a>)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <h2>Passo 1: Acessar o Quick Sender</h2>
+                    <ol>
+                        <li>No menu lateral, clique em <strong>"Quick Sender"</strong></li>
+                        <li>Ou acesse diretamente em: <code>https://app.orbitsender.com/quick-sender</code></li>
+                        <li>Você verá uma interface similar a um chat com uma mensagem de boas-vindas</li>
+                        <li>Na parte inferior, você encontrará os campos para adicionar imagem e texto</li>
+                    </ol>
+
+                    <img src="images/05-01-quick-sender-inicial.png" alt="Tela inicial do Quick Sender" class="tutorial-image">
+
+                    <p>A tela inicial mostra:</p>
+                    <ul>
+                        <li>Uma mensagem de boas-vindas: "Bem vindo ao quick sender. Me mande uma imagem e um texto para começar."</li>
+                        <li>Botão "Adicionar arquivo" para upload de imagens</li>
+                        <li>Botão "Adicionar emoji" para incluir emojis na mensagem</li>
+                        <li>Campo de texto para digitar sua mensagem</li>
+                    </ul>
+                </div>
+
+                <div class="tutorial-step">
+                    <h2>Passo 2: Preencher a Mensagem</h2>
+                    <p>Digite ou cole sua mensagem no campo de texto:</p>
+
+                    <ol>
+                        <li>Clique no campo de texto na parte inferior da tela</li>
+                        <li>Digite ou cole sua mensagem</li>
+                        <li>Você pode usar formatação:
+                            <ul>
+                                <li><code>*texto*</code> para <strong>negrito</strong></li>
+                                <li><code>_texto_</code> para <em>itálico</em></li>
+                                <li><code>~texto~</code> para <del>tachado</del></li>
+                            </ul>
+                        </li>
+                        <li>O contador mostra quantos caracteres e palavras você já digitou (ex: "131/4000 20 palavras")</li>
+                    </ol>
+
+                    <img src="images/05-02-mensagem-preenchida.png" alt="Mensagem preenchida no Quick Sender" class="tutorial-image">
+
+                    <div class="info-box">
+                        <strong>💡 Dica:</strong>
+                        O campo aceita até 4000 caracteres. Você verá um preview da mensagem formatada enquanto digita.
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <h2>Passo 3: Adicionar Imagem (Opcional)</h2>
+                    <p>Você pode adicionar uma imagem à sua mensagem:</p>
+
+                    <ol>
+                        <li>Clique no botão <strong>"Adicionar arquivo"</strong> ou use uma das opções:
+                            <ul>
+                                <li>Clique para selecionar um arquivo do seu computador</li>
+                                <li>Arraste e solte a imagem na área indicada</li>
+                                <li>Cole a imagem usando Ctrl+V (Cmd+V no Mac)</li>
+                            </ul>
+                        </li>
+                        <li>Aguarde alguns segundos enquanto a imagem é carregada</li>
+                        <li>Você verá um preview da imagem acima da mensagem</li>
+                    </ol>
+
+                    <img src="images/05-03-imagem-carregada.png" alt="Imagem carregada no Quick Sender" class="tutorial-image">
+
+                    <div class="warning-box">
+                        <strong>⚠️ Formatos aceitos:</strong>
+                        <p>O sistema aceita apenas os seguintes formatos de imagem:</p>
+                        <ul>
+                            <li><strong>PNG</strong></li>
+                            <li><strong>JPG</strong></li>
+                            <li><strong>JPEG</strong></li>
+                        </ul>
+                        <p>Se você usar outro formato (WEBP, GIF animado, etc.), converta primeiro.</p>
+                    </div>
+
+                    <div class="info-box">
+                        <strong>⏱️ Tempo de upload:</strong>
+                        <p>O upload da imagem pode levar alguns segundos dependendo do tamanho do arquivo e da sua conexão. 
+                        Aguarde até ver o preview da imagem antes de continuar.</p>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <h2>Passo 4: Enviar e Selecionar Segmento</h2>
+                    <p>Após preencher a mensagem e adicionar a imagem (se desejar), envie a mensagem:</p>
+
+                    <ol>
+                        <li>Clique no botão de enviar (ícone de avião de papel) no canto direito do campo de texto</li>
+                        <li>O sistema mostrará um preview da mensagem que será enviada</li>
+                        <li>Você será solicitado a selecionar um segmento ou canal para enviar a mensagem</li>
+                    </ol>
+
+                    <img src="images/05-04-selecionar-segmento.png" alt="Selecionar segmento para envio" class="tutorial-image">
+
+                    <p>Na tela de seleção, você verá:</p>
+                    <ul>
+                        <li>Um preview da mensagem completa (imagem + texto)</li>
+                        <li>Uma seção "Selecionar Segmento" com os segmentos disponíveis</li>
+                        <li>Cada segmento mostra quantos grupos ele contém (ex: "4 grupos")</li>
+                        <li>Um botão "Selecione canal" caso queira enviar para um canal específico</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <strong>💡 Não tem segmentos?</strong>
+                        <p>Se você ainda não criou um segmento, veja o tutorial sobre <a href="tutorial-segmentos.html">Criação de Segmentos</a> antes de continuar.</p>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <h2>Passo 5: Confirmar Envio</h2>
+                    <p>Após selecionar o segmento:</p>
+
+                    <ol>
+                        <li>Clique no segmento desejado (ex: "Segmento Teste SaaS")</li>
+                        <li>O sistema mostrará uma confirmação com o número de grupos que receberão a mensagem</li>
+                        <li>Uma mensagem aparecerá perguntando: "Deseja enviar para X grupos do segmento 'Nome do Segmento'?"</li>
+                        <li>Clique em <strong>"Sim, enviar"</strong> para confirmar</li>
+                    </ol>
+
+                    <img src="images/05-05-segmento-selecionado.png" alt="Confirmação de envio" class="tutorial-image">
+
+                    <div class="success-box">
+                        <strong>✅ Campanha criada com sucesso!</strong>
+                        <p>Após confirmar, você verá uma mensagem de sucesso: "Campanha criada com sucesso! Status: Pendente. Você pode começar novamente."</p>
+                        <p>O sistema retornará à tela inicial do Quick Sender, permitindo que você crie uma nova mensagem se desejar.</p>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <h2>Passo 6: Verificar Campanha na Lista</h2>
+                    <p>Após criar a campanha pelo Quick Sender, você pode acompanhá-la na página de Campanhas (<code>https://app.orbitsender.com/campaigns</code>):</p>
+
+                    <ol>
+                        <li>No menu lateral, clique em <strong>"Campanhas"</strong></li>
+                        <li>Ou acesse diretamente em: <code>https://app.orbitsender.com/campaigns</code></li>
+                        <li>Você verá a campanha recém-criada listada</li>
+                        <li>A campanha terá o nome "Quick Campaign" seguido da data e hora de criação</li>
+                    </ol>
+
+                    <img src="images/05-07-campanhas-lista.png" alt="Lista de campanhas com a campanha criada pelo Quick Sender" class="tutorial-image">
+                </div>
+
+                <div class="tutorial-step">
+                    <h2>Acompanhando o Progresso da Campanha</h2>
+                    <p>Na página de Campanhas (<code>https://app.orbitsender.com/campaigns</code>), você pode ver todas as informações sobre sua campanha:</p>
+
+                    <h3>Informações Exibidas:</h3>
+                    <ul>
+                        <li><strong>Nome da Campanha:</strong> "Quick Campaign" + data e hora</li>
+                        <li><strong>Status:</strong> Indica o estado atual:
+                            <ul>
+                                <li><strong>Pendente:</strong> Aguardando na fila para ser enviada</li>
+                                <li><strong>Enviando:</strong> Atualmente sendo processada</li>
+                                <li><strong>Concluída:</strong> Finalizada com sucesso</li>
+                                <li><strong>Erro:</strong> Algum problema ocorreu durante o envio</li>
+                            </ul>
+                        </li>
+                        <li><strong>Data e Hora:</strong> Quando a campanha foi criada</li>
+                        <li><strong>Status de Execução:</strong> "Aguardando execução" quando pendente</li>
+                        <li><strong>Canais:</strong> Qual canal será usado para o envio</li>
+                        <li><strong>Segmento:</strong> Qual segmento foi selecionado</li>
+                    </ul>
+
+                    <h3>Estatísticas em Tempo Real:</h3>
+                    <p>A campanha mostra três contadores importantes:</p>
+                    <ul>
+                        <li><strong>Pendentes:</strong> Quantos grupos ainda estão aguardando receber a mensagem</li>
+                        <li><strong>Enviados:</strong> Quantos grupos já receberam a mensagem com sucesso</li>
+                        <li><strong>Erros:</strong> Quantos grupos tiveram erro no envio</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <strong>💡 Monitoramento:</strong>
+                        <p>Os números são atualizados em tempo real enquanto a campanha está sendo processada. 
+                        Você pode acompanhar o progresso visualmente através desses contadores.</p>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <h2>Fila de Campanhas</h2>
+                    <p>Quando você envia múltiplas campanhas pelo Quick Sender:</p>
+
+                    <h3>Como Funciona:</h3>
+                    <ul>
+                        <li><strong>Cada mensagem cria uma nova campanha:</strong> Cada vez que você envia pelo Quick Sender, uma nova campanha é criada</li>
+                        <li><strong>As campanhas entram em uma fila:</strong> As campanhas são processadas em ordem de criação</li>
+                        <li><strong>Intervalo entre campanhas:</strong> O sistema respeita o intervalo configurado nas <a href="tutorial-configuracoes.html">Configurações</a></li>
+                        <li><strong>Processamento sequencial:</strong> Após uma campanha finalizar, a próxima na fila começa automaticamente</li>
+                    </ul>
+
+                    <h3>Status da Fila:</h3>
+                    <ul>
+                        <li><strong>Pendente:</strong> Campanha aguardando na fila</li>
+                        <li><strong>Em Fila:</strong> Campanha agendada para ser processada após a atual</li>
+                        <li><strong>Enviando:</strong> Campanha sendo processada no momento</li>
+                    </ul>
+
+                    <div class="info-box">
+                        <strong>ℹ️ Estratégia de Disparo:</strong>
+                        <p>Você pode:</p>
+                        <ol>
+                            <li>Aumentar o intervalo entre campanhas nas <a href="tutorial-configuracoes.html">Configurações</a></li>
+                            <li>Criar várias mensagens no Quick Sender de uma vez</li>
+                            <li>O sistema irá disparando automaticamente durante o dia, respeitando os intervalos</li>
+                        </ol>
+                        <p>Isso é útil para ter disparos automáticos ao longo do dia sem precisar estar presente o tempo todo.</p>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <h2>Ações Disponíveis na Lista de Campanhas</h2>
+                    <p>Para cada campanha, você tem acesso a várias ações:</p>
+
+                    <ul>
+                        <li><strong>Ver Detalhes:</strong> Visualiza informações detalhadas sobre a campanha, incluindo estatísticas por grupo</li>
+                        <li><strong>Cancelar:</strong> Cancela uma campanha que ainda está pendente ou na fila</li>
+                        <li><strong>Excluir:</strong> Remove a campanha da lista (após concluída ou cancelada)</li>
+                    </ul>
+
+                    <div class="warning-box">
+                        <strong>⚠️ Atenção:</strong>
+                        <p>Ao cancelar uma campanha que está sendo enviada, apenas os grupos que ainda não receberam a mensagem serão cancelados. 
+                        Grupos que já receberam não serão afetados.</p>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <h2>Dicas de Uso</h2>
+                    <div class="tips-grid">
+                        <div class="tip-card tip-success">
+                            <h3>✅ Boas Práticas</h3>
+                            <ul>
+                                <li>Revise a mensagem e imagem antes de enviar</li>
+                                <li>Verifique se o segmento selecionado está correto</li>
+                                <li>Monitore as campanhas na página de Campanhas (<code>https://app.orbitsender.com/campaigns</code>)</li>
+                                <li>Aguarde o upload completo da imagem antes de enviar</li>
+                            </ul>
+                        </div>
+
+                        <div class="tip-card tip-info">
+                            <h3>ℹ️ Funcionalidades</h3>
+                            <ul>
+                                <li>Pode ser usado pelo computador ou celular</li>
+                                <li>Recomendamos computador para primeira vez</li>
+                                <li>Funciona como um chat comum</li>
+                                <li>Suporte a formatação de texto (negrito, itálico, tachado)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tutorial-step">
+                    <h2>Problemas Comuns</h2>
+
+                    <h3>❌ Botão não aparece no celular</h3>
+                    <p><strong>Solução:</strong></p>
+                    <ol>
+                        <li>Tente rolar a tela para baixo</li>
+                        <li>Rotacione o celular (modo paisagem)</li>
+                        <li>Use o computador para criar canais e configurações</li>
+                        <li>Use o celular para monitorar campanhas</li>
+                    </ol>
+
+                    <h3>❌ Erro ao enviar imagem</h3>
+                    <p><strong>Solução:</strong></p>
+                    <ol>
+                        <li>Verifique se o formato é PNG, JPG ou JPEG</li>
+                        <li>Se for outro formato, converta primeiro</li>
+                        <li>Reduza o tamanho da imagem se for muito grande</li>
+                        <li>Tente enviar apenas o texto primeiro para testar</li>
+                        <li>Aguarde alguns segundos após fazer upload da imagem</li>
+                    </ol>
+
+                    <h3>❌ Segmento não aparece na seleção</h3>
+                    <p><strong>Solução:</strong></p>
+                    <ol>
+                        <li>Certifique-se de que você criou pelo menos um segmento (veja <a href="tutorial-segmentos.html">Criação de Segmentos</a>)</li>
+                        <li>Verifique se o segmento tem grupos selecionados</li>
+                        <li>Recarregue a página</li>
+                        <li>Crie um novo segmento se necessário</li>
+                    </ol>
+
+                    <h3>❌ Campanha não aparece na lista</h3>
+                    <p><strong>Solução:</strong></p>
+                    <ol>
+                        <li>Recarregue a página de Campanhas (<code>https://app.orbitsender.com/campaigns</code>)</li>
+                        <li>Verifique se você confirmou o envio corretamente</li>
+                        <li>Verifique se há mensagens de erro no console do navegador</li>
+                        <li>Tente criar outra campanha para testar</li>
+                    </ol>
+                </div>
+
+                <div class="tutorial-step">
+                    <h2>Resumo do Processo</h2>
+                    <ol>
+                        <li>✅ Acesse o Quick Sender pelo menu lateral ou diretamente em: <code>https://app.orbitsender.com/quick-sender</code></li>
+                        <li>✅ Preencha a mensagem no campo de texto</li>
+                        <li>✅ Adicione uma imagem (opcional) - aguarde o upload completo</li>
+                        <li>✅ Clique em enviar</li>
+                        <li>✅ Selecione o segmento desejado</li>
+                        <li>✅ Confirme o envio clicando em "Sim, enviar"</li>
+                        <li>✅ Acompanhe a campanha na página de Campanhas (<code>https://app.orbitsender.com/campaigns</code>)</li>
+                        <li>✅ Monitore o progresso através das estatísticas em tempo real</li>
+                    </ol>
+                </div>
+
+                <div class="tutorial-step">
+                    <h2>Próximos Passos</h2>
+                    <p>Agora que você aprendeu a usar o Quick Sender, explore:</p>
+                    <ul>
+                        <li><a href="tutorial-segmentos.html" class="btn btn-primary">👥 Gerenciar segmentos</a></li>
+                        <li><a href="tutorial-configuracoes.html" class="btn btn-outline">⚙️ Configurar intervalos de disparo</a></li>
+                        <li><a href="index.html#dicas" class="btn btn-outline">💡 Ver mais dicas</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <p>Documentação OrbitSender © 2025</p>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

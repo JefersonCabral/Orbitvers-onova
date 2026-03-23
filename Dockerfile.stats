@@ -1,0 +1,19 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Copy package files
+COPY package*.json ./
+
+# Install dependencies (including pg)
+RUN npm ci
+
+# Copy stats server
+COPY stats-server.js ./
+
+# Expose stats server port
+EXPOSE 3001
+
+# Start stats server
+CMD ["node", "stats-server.js"]
+
