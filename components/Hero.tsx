@@ -53,7 +53,7 @@ export default function Hero() {
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row gap-3 mt-8 items-center justify-center scroll-reveal" style={{ animationDelay: '0.15s' }}>
           <a
-            href="https://app.orbitsender.com/register"
+            href="#precos"
             className="inline-flex items-center gap-2 rounded-full bg-white text-neutral-900 px-7 py-3.5 text-sm font-semibold hover:-translate-y-0.5 transition-all duration-200 shadow-[0_1px_0_0_rgba(255,255,255,0.4)_inset] cursor-pointer"
           >
             Começar Agora

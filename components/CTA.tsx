@@ -30,7 +30,7 @@ export default function CTA() {
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3">
             <a
-              href="https://app.orbitsender.com/register"
+              href="#precos"
               className="w-full sm:w-auto inline-flex justify-center items-center gap-2 rounded-full bg-white text-neutral-900 px-8 py-4 text-sm font-bold hover:-translate-y-0.5 transition-all duration-200 shadow-[0_1px_0_0_rgba(255,255,255,0.4)_inset] cursor-pointer"
             >
               Começar Agora <ArrowRight size={14} />

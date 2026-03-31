@@ -11,6 +11,7 @@ const plans = [
     savings: 'R$ 12,99/mês',
     description: 'Ideal para validar sua operação e começar os primeiros envios.',
     popular: false,
+    paymentUrl: 'https://pay.kiwify.com.br/u6Xy97a',
     colorClass: 'border-cyan-500/30 shadow-cyan-500/10 hover:border-cyan-400/60 hover:shadow-cyan-500/20',
     colorGradient: 'from-cyan-400 to-blue-400',
     buttonGradient: 'from-cyan-600 to-blue-500 hover:from-cyan-500 hover:to-blue-400 hover:shadow-cyan-600/40',
@@ -40,6 +41,7 @@ const plans = [
     savings: 'R$ 34,49/mês',
     description: 'Focado em crescimento e expansão da operação.',
     popular: true,
+    paymentUrl: 'https://pay.kiwify.com.br/fG4UEO7',
     colorClass: 'border-violet-500/50 shadow-violet-500/20 hover:border-violet-400/70 hover:shadow-violet-500/40',
     colorGradient: 'from-violet-400 via-fuchsia-400 to-pink-400',
     buttonGradient: 'from-violet-600 to-fuchsia-500 hover:from-violet-500 hover:to-fuchsia-400 hover:shadow-violet-600/40',
@@ -65,6 +67,7 @@ const plans = [
     savings: 'R$ 98/mês',
     description: 'A potência máxima: Gestão de equipe e automação industrial.',
     popular: false,
+    paymentUrl: 'https://pay.kiwify.com.br/RZ72mdo',
     colorClass: 'border-red-500/50 shadow-red-500/20 hover:border-red-400/70 hover:shadow-red-500/40',
     colorGradient: 'from-red-400 via-orange-400 to-amber-400',
     buttonGradient: 'from-red-600 to-orange-500 hover:from-red-500 hover:to-orange-400 hover:shadow-red-600/40',
@@ -216,7 +219,7 @@ export default function Pricing() {
 
                   {/* CTA Button */}
                   <a
-                    href="https://app.orbitsender.com/register"
+                    href={plan.paymentUrl}
                     className={`w-full py-4 rounded-xl font-bold block text-center text-white shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 mt-auto bg-gradient-to-r ${plan.buttonGradient}`}
                   >
                     🔥 Aproveitar Promoção
