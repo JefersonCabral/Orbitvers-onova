@@ -1,42 +1,60 @@
 import React from 'react';
-import { Rocket } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function CTA() {
   return (
-    <section className="py-20 bg-[#0B1120]">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-3xl p-10 md:p-16 text-center overflow-hidden">
-          {/* Background Gradient */}
-          <div className="absolute inset-0 bg-gradient-to-r from-indigo-900 via-purple-900 to-indigo-900 opacity-50"></div>
-          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+    <section className="py-14 sm:py-18 lg:py-24 bg-neutral-950 relative overflow-hidden">
+      {/* Indigo ambient blob */}
+      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[700px] h-[500px] bg-indigo-600/10 rounded-full blur-[140px]" />
 
-          <div className="relative z-10">
-            <div className="inline-flex items-center justify-center p-3 bg-indigo-500/20 rounded-full mb-8">
-              <Rocket className="w-8 h-8 text-indigo-400" />
-            </div>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="border-gradient bg-white/[0.03] ring-1 ring-white/[0.08] rounded-3xl p-10 md:p-16 text-center scroll-reveal hover:-translate-y-0.5 transition-all duration-300">
 
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-              <span className="gradient-text-static">Entrega Garantida de Mensagens</span> em Seus Grupos, Aumenta em até <span className="gradient-text-static">40% de Cliques</span> em Seus Links
-            </h2>
+          {/* Gradient accent pill */}
+          <div className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-indigo-500/20 to-purple-500/20 ring-1 ring-indigo-500/30 px-4 py-1.5 text-xs text-indigo-300 font-semibold mb-8">
+            <span className="h-1.5 w-1.5 rounded-full bg-indigo-400 animate-pulse" />
+            Comece hoje mesmo
+          </div>
 
-            <p className="text-lg text-indigo-200/90 mb-10 max-w-2xl mx-auto">
-              A única plataforma de gestão de grupos e campanhas em massa para achadinhos com entrega garantida de mensagens. Com API própria, múltiplos números, uptime de 99,9% e IA integrada que otimiza suas ofertas automaticamente. Junte-se a centenas de afiliados que escalaram suas operações com <span className="text-white font-semibold">estabilidade total</span>.
-            </p>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tighter text-white mb-5">
+            <span className="gradient-text-static">Entrega Garantida de Mensagens</span>{' '}
+            em Seus Grupos, Aumenta em até{' '}
+            <span className="gradient-text-static">40% de Cliques</span>{' '}
+            em Seus Links
+          </h2>
 
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-6">
-              <a href="https://app.orbitsender.com/register" className="w-full sm:w-auto bg-white text-indigo-900 px-8 py-4 rounded-xl text-lg font-bold hover:bg-indigo-50 transition-colors shadow-xl text-center">
-                Começar Agora
-              </a>
-              <a href="https://wa.me/554499763965?text=Olá! Gostaria de agendar uma demonstração do OrbitSender." target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto text-white border border-white/20 px-8 py-4 rounded-xl text-lg font-semibold hover:bg-white/10 transition-colors text-center">
-                Agendar Demonstração
-              </a>
-            </div>
+          <p className="text-base text-neutral-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+            A única plataforma de gestão de grupos e campanhas em massa para achadinhos com entrega garantida de mensagens. Com API própria, múltiplos números, uptime de 99,9% e IA integrada que otimiza suas ofertas automaticamente. Junte-se a centenas de afiliados que escalaram suas operações com{' '}
+            <span className="text-white font-medium">estabilidade total</span>.
+          </p>
 
-            <div className="mt-8 flex flex-wrap justify-center gap-4 text-sm text-indigo-300/80">
-              <span className="flex items-center gap-1">✅ Promoção por tempo limitado</span>
-              <span className="hidden sm:inline">•</span>
-              <span className="flex items-center gap-1">✅ Cancele quando quiser</span>
-            </div>
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-3">
+            <a
+              href="https://app.orbitsender.com/register"
+              className="w-full sm:w-auto inline-flex justify-center items-center gap-2 rounded-full bg-white text-neutral-900 px-8 py-4 text-sm font-bold hover:-translate-y-0.5 transition-all duration-200 shadow-[0_1px_0_0_rgba(255,255,255,0.4)_inset] cursor-pointer"
+            >
+              Começar Agora <ArrowRight size={14} />
+            </a>
+            <a
+              href="https://wa.me/554499763965?text=Olá! Gostaria de agendar uma demonstração do OrbitSender."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex justify-center items-center border-gradient bg-white/5 backdrop-blur-xl rounded-full px-8 py-4 text-sm font-medium text-white/80 hover:text-white hover:-translate-y-0.5 transition-all duration-200 cursor-pointer"
+            >
+              Agendar Demonstração
+            </a>
+          </div>
+
+          <div className="mt-8 flex flex-wrap justify-center gap-4 text-xs text-neutral-500">
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block" />
+              Promoção por tempo limitado
+            </span>
+            <span className="hidden sm:inline text-neutral-700">·</span>
+            <span className="flex items-center gap-1.5">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block" />
+              Cancele quando quiser
+            </span>
           </div>
         </div>
       </div>

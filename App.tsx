@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
-import { Menu, X, Rocket } from 'lucide-react';
+import { Menu, X, Rocket, ArrowRight } from 'lucide-react';
 import SEO from './components/SEO';
 import Hero from './components/Hero';
 // import VideoTestimonials from './components/VideoTestimonials';
@@ -22,7 +22,6 @@ const NotFound = lazy(() => import('./components/NotFound'));
 export default function App() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [showBanner, setShowBanner] = useState(true);
   const [currentPage, setCurrentPage] = useState('home');
   const [isNotFound, setIsNotFound] = useState(false);
   const lastHashRef = useRef<string>('');
@@ -36,7 +35,6 @@ export default function App() {
 
       const scrollY = window.scrollY;
       setIsScrolled(scrollY > 20);
-      setShowBanner(scrollY < 50); // Esconde o banner após 50px de scroll
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
@@ -211,7 +209,6 @@ export default function App() {
   const WHATSAPP_URL = 'https://wa.me/554499763965';
 
   const navLinks = [
-    { name: 'Início', href: '#hero' },
     { name: 'Diferenciais', href: '#diferenciais' },
     { name: 'Funcionalidades', href: '#funcionalidades' },
     { name: 'Preços', href: '#precos' },
@@ -392,36 +389,33 @@ export default function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0F172A] text-slate-50 selection:bg-indigo-500 selection:text-white overflow-x-hidden">
-      <SEO {...getSEOProps()} />
-      {/* Banner Topo - Fixo acima do header */}
-      {!isNotFound && (
-        <div
-          className={`fixed top-0 left-0 right-0 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-xs md:text-sm py-2 text-center font-medium px-4 z-[60] transition-all duration-500 ease-in-out ${showBanner ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
-            }`}
-        >
-          <div className="flex items-center justify-center gap-2">
-            <span className="animate-pulse">🎉</span>
-            <span>Novo: IA Que Otimiza Suas Ofertas Automaticamente!</span>
-            <a href={`${APP_URL}/register`} className="underline cursor-pointer ml-1 hover:text-indigo-200 transition-colors font-semibold">Comece agora →</a>
-          </div>
+    <div className="min-h-screen bg-[#0A0E1A] text-white selection:bg-indigo-500 selection:text-white overflow-x-hidden">
+      {/* Background Grid */}
+      <div className="fixed inset-0 -z-10 bg-[#0A0E1A]">
+        <div className="absolute inset-0 opacity-[0.04]">
+          <svg className="w-full h-full" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse">
+                <path d="M64 0H0v64" fill="none" stroke="white" strokeWidth="0.5"/>
+              </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#grid)"/>
+          </svg>
         </div>
-      )}
+      </div>
 
-      {/* Navbar - Fixo abaixo do banner */}
+      <SEO {...getSEOProps()} />
+
+      {/* Navbar — Static header */}
       {!isNotFound && (
-        <header
-          className={`fixed w-full z-50 transition-all duration-500 ease-in-out ${showBanner ? 'top-8' : 'top-0'
-            } ${isScrolled || isMobileMenuOpen
-              ? 'bg-[#0F172A]/95 backdrop-blur-xl border-b border-white/10 shadow-lg shadow-black/20'
-              : 'bg-transparent'
-            }`}
-        >
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex justify-between items-center h-20">
-              {/* Logo */}
+        <header className="fixed z-50 top-0 left-0 right-0 flex justify-center pointer-events-none backdrop-blur-md bg-[#0A0E1A]/40">
+          {/* Inner wrapper — always visible, no scroll effects */}
+          <div className="pointer-events-auto w-full">
+            {/* Inner content row */}
+            <div className="flex items-center justify-between h-20 px-4 sm:px-6 lg:px-8 mx-auto max-w-7xl w-full">
+              {/* Logo — always visible */}
               <div
-                className="flex items-center gap-2 cursor-pointer group transition-transform duration-300 hover:scale-105"
+                className="flex items-center gap-2 cursor-pointer group shrink-0"
                 onClick={() => {
                   setCurrentPage('home');
                   lastHashRef.current = '';
@@ -429,42 +423,46 @@ export default function App() {
                   window.history.pushState(null, '', '#');
                   setTimeout(() => {
                     window.scrollTo({ top: 0, behavior: 'smooth' });
-                    setTimeout(() => {
-                      isScrollingRef.current = false;
-                    }, 500);
+                    setTimeout(() => { isScrollingRef.current = false; }, 500);
                   }, 100);
                 }}
               >
-                <div className="bg-indigo-600 p-2 rounded-full transition-all duration-300 group-hover:bg-indigo-500 group-hover:rotate-12 group-hover:scale-110 shadow-lg shadow-indigo-600/50">
-                  <Rocket className="w-5 h-5 text-white transition-transform duration-300 group-hover:scale-110" />
+                <div className="border-gradient bg-white/10 w-8 h-8 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:bg-white/15 transition-colors duration-200">
+                  <Rocket className="w-3.5 h-3.5 text-white" />
                 </div>
-                <span className="text-xl font-bold tracking-tight text-white transition-colors duration-300 group-hover:text-indigo-300">
-                  Orbit<span className="text-indigo-400 group-hover:text-indigo-300">Sender</span>
+                <span className="text-base font-semibold tracking-tight text-white">
+                  Orbit<span className="text-indigo-400">Sender</span>
                 </span>
               </div>
 
-              {/* Desktop Nav */}
-              <nav className="hidden md:flex items-center space-x-8">
+              {/* Desktop Nav links */}
+              <nav className="hidden md:flex items-center gap-6">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
                     href={link.href}
                     onClick={(e) => handleAnchorClick(e, link.href)}
-                    className="text-slate-300 hover:text-white transition-all duration-300 text-sm font-medium relative group"
+                    className="text-neutral-400 hover:text-white transition-colors duration-200 text-sm font-medium whitespace-nowrap"
                   >
                     {link.name}
-                    <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-indigo-400 transition-all duration-300 group-hover:w-full"></span>
                   </a>
                 ))}
               </nav>
 
-              {/* Desktop Auth Buttons */}
-              <div className="hidden md:flex items-center gap-4">
-                <a href={`${APP_URL}/login`} className="text-slate-300 hover:text-white text-sm font-medium transition-all duration-300 hover:scale-105">
+              {/* Auth buttons — always visible */}
+              <div className="hidden md:flex items-center gap-3 shrink-0">
+                <a
+                  href={`${APP_URL}/login`}
+                  className="text-neutral-400 hover:text-white text-sm font-medium transition-colors duration-200 whitespace-nowrap"
+                >
                   Entrar
                 </a>
-                <a href={`${APP_URL}/register`} className="btn-primary bg-indigo-600 hover:bg-indigo-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold shadow-lg shadow-indigo-600/20 transform hover:-translate-y-1 hover:shadow-xl hover:shadow-indigo-600/40">
+                <a
+                  href={`${APP_URL}/register`}
+                  className="inline-flex items-center gap-1.5 border-gradient bg-white/5 backdrop-blur-xl rounded-full px-4 py-2 text-sm font-medium text-white/80 hover:text-white hover:-translate-y-0.5 transition-all duration-200 cursor-pointer whitespace-nowrap"
+                >
                   Começar Agora
+                  <ArrowRight size={13} />
                 </a>
               </div>
 
@@ -476,16 +474,16 @@ export default function App() {
                   aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
                   aria-expanded={isMobileMenuOpen}
                 >
-                  {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                  {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
                 </button>
               </div>
             </div>
           </div>
 
-          {/* Mobile Menu */}
+          {/* Mobile Menu — fixed below header */}
           {isMobileMenuOpen && (
-            <div className="md:hidden bg-[#0F172A]/98 backdrop-blur-xl border-t border-white/10 absolute w-full pb-6 shadow-2xl animate-fade-in-down">
-              <div className="px-4 pt-2 pb-3 space-y-1">
+            <div className="pointer-events-auto md:hidden fixed z-40 left-4 right-4 top-20 bg-[#0A0E1A]/80 backdrop-blur-lg border border-white/[0.08] rounded-2xl pb-4 shadow-2xl animate-fade-in-down">
+              <div className="px-4 pt-3 pb-1 space-y-1">
                 {navLinks.map((link, index) => (
                   <a
                     key={link.name}
@@ -494,17 +492,17 @@ export default function App() {
                       handleAnchorClick(e, link.href);
                       setIsMobileMenuOpen(false);
                     }}
-                    className="block px-3 py-3 text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-md transition-all duration-300 hover:translate-x-2"
-                    style={{ animationDelay: `${index * 0.1}s` }}
+                    className="block px-3 py-3 text-sm font-medium text-neutral-400 hover:text-white hover:bg-white/[0.04] rounded-xl transition-colors duration-200"
+                    style={{ animationDelay: `${index * 0.05}s` }}
                   >
                     {link.name}
                   </a>
                 ))}
-                <div className="pt-4 border-t border-white/10 mt-4 flex flex-col gap-3">
-                  <a href={`${APP_URL}/login`} className="w-full text-center text-slate-300 hover:text-white py-2 font-medium transition-all duration-300 hover:scale-105">
+                <div className="pt-3 border-t border-white/[0.06] mt-2 flex flex-col gap-2.5 px-1">
+                  <a href={`${APP_URL}/login`} className="w-full text-center text-neutral-400 hover:text-white py-2 text-sm font-medium transition-colors duration-200">
                     Entrar
                   </a>
-                  <a href={`${APP_URL}/register`} className="btn-primary w-full bg-indigo-600 hover:bg-indigo-700 text-white py-3 rounded-lg font-semibold shadow-lg text-center hover:shadow-xl hover:shadow-indigo-600/40">
+                  <a href={`${APP_URL}/register`} className="w-full inline-flex justify-center rounded-full bg-white text-neutral-900 py-3 text-sm font-semibold hover:-translate-y-0.5 transition-all duration-200">
                     Começar Agora
                   </a>
                 </div>
@@ -515,7 +513,7 @@ export default function App() {
       )}
 
       {/* Main Content */}
-      <main id="main-content" className={`transition-all duration-300 ${isNotFound ? '' : showBanner ? 'pt-28' : 'pt-20'}`} role="main">
+      <main id="main-content" className={`${isNotFound ? '' : 'pt-20'}`} role="main">
         {isNotFound ? (
           <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="text-white text-xl">Carregando...</div></div>}>
             <NotFound />
@@ -549,25 +547,27 @@ export default function App() {
 
       {/* Footer - não mostra na página 404 */}
       {!isNotFound && (
-        <footer className="bg-[#0B1120] pt-16 pb-8 border-t border-white/5" role="contentinfo">
+        <footer className="bg-[#0A0E1A] pt-12 pb-8 border-t border-white/[0.06]" role="contentinfo">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
               <div>
                 <div className="flex items-center gap-2 mb-6">
-                  <div className="bg-indigo-600 p-2 rounded-full">
-                    <Rocket className="w-4 h-4 text-white" />
+                  <div className="border-gradient bg-white/10 w-8 h-8 rounded-full flex items-center justify-center">
+                    <Rocket className="w-3.5 h-3.5 text-white" />
                   </div>
-                  <span className="text-lg font-bold text-white">Orbit<span className="text-indigo-400">Sender</span></span>
+                  <span className="text-base font-semibold text-white tracking-tight">Orbit<span className="text-indigo-400">Sender</span></span>
                 </div>
                 <p className="text-slate-400 text-sm leading-relaxed mb-4">
                   A única plataforma de envio em massa que combina API própria, múltiplos números por conta e inteligência artificial.
                 </p>
                 <div className="flex flex-wrap gap-2 mt-4">
-                  <span className="inline-flex items-center gap-1 px-2 py-1 bg-emerald-500/10 border border-emerald-500/30 rounded text-emerald-400 text-xs font-semibold">
-                    ✓ LGPD Compliant
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border-gradient bg-white/5 text-emerald-400 text-xs font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block"></span>
+                    LGPD Compliant
                   </span>
-                  <span className="inline-flex items-center gap-1 px-2 py-1 bg-indigo-500/10 border border-indigo-500/30 rounded text-indigo-400 text-xs font-semibold">
-                    ✓ 99.9% Uptime
+                  <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border-gradient bg-white/5 text-indigo-400 text-xs font-medium">
+                    <span className="w-1.5 h-1.5 rounded-full bg-indigo-400 inline-block"></span>
+                    99.9% Uptime
                   </span>
                 </div>
               </div>
