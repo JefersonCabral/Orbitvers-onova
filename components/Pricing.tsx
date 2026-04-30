@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Check, X, Rocket, Moon, Sparkles } from 'lucide-react';
+import { Check, X, Rocket, Moon, Sparkles, Flame } from 'lucide-react';
 
 const plans = [
   {
@@ -182,7 +182,10 @@ export default function Pricing() {
                       {decimalPart && <span className={`text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r ${plan.colorGradient} group-hover:from-${plan.name === 'COMETA' ? 'cyan-300' : plan.name === 'LUNAR' ? 'violet-300' : 'red-300'} group-hover:to-${plan.name === 'COMETA' ? 'blue-300' : plan.name === 'LUNAR' ? 'pink-300' : 'amber-300'} transition-all duration-300`}>,{decimalPart}</span>}
                       <span className="text-slate-400 text-xl">/mês</span>
                     </div>
-                    <span className="text-xs text-emerald-400 font-medium mt-1">🔥 Economize {plan.savings}</span>
+                    <span className="text-xs text-emerald-400 font-medium mt-1 inline-flex items-center gap-1.5">
+                      <Flame size={12} className="text-emerald-400" />
+                      Economize {plan.savings}
+                    </span>
                   </div>
 
                   {/* Description */}
@@ -222,7 +225,7 @@ export default function Pricing() {
                     href={plan.paymentUrl}
                     className={`w-full py-4 rounded-xl font-bold block text-center text-white shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300 mt-auto bg-gradient-to-r ${plan.buttonGradient}`}
                   >
-                    🔥 Aproveitar Promoção
+                    Aproveitar Promoção
                   </a>
                 </div>
               </div>

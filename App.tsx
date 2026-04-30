@@ -2,10 +2,14 @@ import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import { Menu, X, Rocket, ArrowRight } from 'lucide-react';
 import SEO from './components/SEO';
 import Hero from './components/Hero';
-// import VideoTestimonials from './components/VideoTestimonials';
+import PainBlock from './components/PainBlock';
+import BreakBlock from './components/BreakBlock';
+import MechanismBlock from './components/MechanismBlock';
+import ResultBlock from './components/ResultBlock';
 import WhyOrbit from './components/WhyOrbit';
-import Differentiators from './components/Differentiators';
+import ValueAnchorBlock from './components/ValueAnchorBlock';
 import Features from './components/Features';
+import ObjectionsBlock from './components/ObjectionsBlock';
 import Testimonials from './components/Testimonials';
 import Pricing from './components/Pricing';
 import FAQ from './components/FAQ';
@@ -532,10 +536,14 @@ export default function App() {
             {currentPage === 'home' && (
               <>
                 <Hero />
-                {/* <VideoTestimonials /> */}
+                <PainBlock />
+                <BreakBlock />
+                <MechanismBlock />
+                <ResultBlock />
                 <WhyOrbit />
-                <Differentiators />
+                <ValueAnchorBlock />
                 <Features />
+                <ObjectionsBlock />
                 <Testimonials />
                 <Pricing />
                 <FAQ />
