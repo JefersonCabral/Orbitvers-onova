@@ -34,7 +34,7 @@ const flowSteps = [
     label: 'envia',
     labelColor: 'text-emerald-400',
     example: 'Disparado para 34 grupos',
-    detail: '2.400 membros alcançados — tudo automático, sem você tocar',
+    detail: 'Tudo automático, sem você tocar',
     badge: '98% entregues',
     badgeClass: 'bg-emerald-500/15 text-emerald-300',
   },

@@ -66,12 +66,13 @@ export default function MechanismBlock() {
 
         {/* Header */}
         <div className="text-center mb-10 sm:mb-12 scroll-reveal">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter text-white mb-4">
-            Como seus grupos começam a{' '}
-            <span className="gradient-text-static">vender sozinhos</span>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tighter text-white mb-4 max-w-3xl mx-auto leading-tight">
+            O OrbitSender roda em loop — 24 horas por dia, sem esforço, sem atraso,{' '}
+            <span className="gradient-text-static">sem perda de tempo.</span>
           </h2>
-          <p className="text-neutral-400 text-sm max-w-md mx-auto leading-relaxed">
-            O OrbitSender roda em loop — 24 horas por dia, sem esforço, sem atraso, sem perda de timing.
+          <p className="text-neutral-400 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
+            Como seus grupos começam a{' '}
+            <span className="gradient-text-static">vender sozinhos?</span>
           </p>
         </div>
 
@@ -131,7 +132,7 @@ export default function MechanismBlock() {
                 { label: '24 horas por dia', delay: '0s' },
                 { label: 'Sem esforço', delay: '0.3s' },
                 { label: 'Sem atraso', delay: '0.6s' },
-                { label: 'Sem perda de timing', delay: '0.9s' },
+                { label: 'Sem perda de tempo', delay: '0.9s' },
               ].map((t, i) => (
                 <span key={i} className="flex items-center gap-1.5">
                   <span
