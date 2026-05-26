@@ -4,7 +4,279 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
+    <!-- UTM / Traffic Attribution (Kiwify) - o mais alto possível, antes de qualquer outro script -->
+    <script>
+      (function () {
+        // ─────────────────────────────────────────────
+        // CONFIGURAÇÕES
+        // ─────────────────────────────────────────────
+        var STORAGE_KEY       = '_traffic_attribution';
+        var FIRST_TOUCH_KEY   = '_traffic_attribution_ft';
+        var COOKIE_TTL_DAYS   = 30; // dias de persistência
+        var COOKIE_TTL_MIN    = COOKIE_TTL_DAYS * 24 * 60;
+
+        // Parâmetros capturados (UTMs + click ID do Meta Ads)
+        var TRACKED_PARAMS = [
+          'utm_source',
+          'utm_medium',
+          'utm_campaign',
+          'utm_content',
+          'utm_term',
+          'fbclid',   // Meta Ads (Facebook/Instagram)
+        ];
+
+        // Domínios de checkout onde os UTMs devem ser propagados
+        var CHECKOUT_PATTERNS = [
+          'kiwify.com.br',
+          'pay.kiwify.com.br',
+          'checkout.kiwify.com.br',
+          // Adicione outros domínios de checkout aqui se necessário
+        ];
+
+        // ─────────────────────────────────────────────
+        // UTILIDADES DE COOKIE
+        // ─────────────────────────────────────────────
+        function setCookie(name, value, minutesTTL) {
+          var expires = new Date(Date.now() + minutesTTL * 60 * 1000).toUTCString();
+          // domain='' faz o cookie funcionar em subdomínios também
+          var domain = location.hostname.replace(/^[^.]+/, '');
+          var domainPart = domain && domain.length > 1 ? '; domain=' + domain : '';
+          document.cookie =
+            name + '=' + encodeURIComponent(JSON.stringify(value)) +
+            '; expires=' + expires +
+            '; path=/' +
+            domainPart +
+            '; SameSite=Lax';
+        }
+
+        function getCookie(name) {
+          var match = document.cookie.match(
+            new RegExp('(?:^|;\\s*)' + name.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + '=([^;]*)')
+          );
+          if (!match) return null;
+          try { return JSON.parse(decodeURIComponent(match[1])); } catch (e) { return null; }
+        }
+
+        // ─────────────────────────────────────────────
+        // UTILIDADES DE LOCALSTORAGE
+        // ─────────────────────────────────────────────
+        function lsGet(key) {
+          try {
+            var raw = localStorage.getItem(key);
+            if (!raw) return null;
+            var parsed = JSON.parse(raw);
+            // Verifica expiração
+            if (parsed._expires && Date.now() > parsed._expires) {
+              localStorage.removeItem(key);
+              return null;
+            }
+            return parsed.data || null;
+          } catch (e) { return null; }
+        }
+
+        function lsSet(key, value, minutesTTL) {
+          try {
+            localStorage.setItem(key, JSON.stringify({
+              data: value,
+              _expires: Date.now() + minutesTTL * 60 * 1000
+            }));
+          } catch (e) {}
+        }
+
+        // ─────────────────────────────────────────────
+        // LER / SALVAR ATRIBUIÇÃO
+        // ─────────────────────────────────────────────
+        function readFromUrl() {
+          var params = new URLSearchParams(window.location.search);
+          var found  = {};
+          TRACKED_PARAMS.forEach(function (key) {
+            var val = params.get(key);
+            if (val) found[key] = val;
+          });
+          return found;
+        }
+
+        function saveAttribution(key, data) {
+          lsSet(key, data, COOKIE_TTL_MIN);
+          setCookie(key, data, COOKIE_TTL_MIN);
+        }
+
+        function readAttribution(key) {
+          return lsGet(key) || getCookie(key) || {};
+        }
+
+        // ─────────────────────────────────────────────
+        // LÓGICA PRINCIPAL DE ATRIBUIÇÃO
+        // ─────────────────────────────────────────────
+        var fromUrl      = readFromUrl();
+        var lastTouch    = readAttribution(STORAGE_KEY);
+        var firstTouch   = readAttribution(FIRST_TOUCH_KEY);
+
+        // Mescla last-touch (último clique prevalece sobre dado salvo)
+        var currentUtms = Object.assign({}, lastTouch, fromUrl);
+
+        if (Object.keys(currentUtms).length > 0) {
+          // Salva last-touch sempre (atualiza a cada visita com UTM)
+          saveAttribution(STORAGE_KEY, currentUtms);
+
+          // Salva first-touch apenas uma vez (nunca sobrescreve)
+          if (!Object.keys(firstTouch).length) {
+            saveAttribution(FIRST_TOUCH_KEY, currentUtms);
+          }
+
+          // Mantém no sessionStorage para acesso rápido na mesma sessão
+          try { sessionStorage.setItem(STORAGE_KEY, JSON.stringify(currentUtms)); } catch (e) {}
+        }
+
+        // ─────────────────────────────────────────────
+        // EXPÕE GLOBALMENTE (para uso em outros scripts, ex: envio de form)
+        // ─────────────────────────────────────────────
+        window._utmTracker = {
+          getLastTouch:  function () { return Object.assign({}, readAttribution(STORAGE_KEY)); },
+          getFirstTouch: function () { return Object.assign({}, readAttribution(FIRST_TOUCH_KEY)); },
+          getAll: function () {
+            return {
+              lastTouch:  window._utmTracker.getLastTouch(),
+              firstTouch: window._utmTracker.getFirstTouch()
+            };
+          }
+        };
+
+        // ─────────────────────────────────────────────
+        // PROPAGAÇÃO: verifica se URL é de checkout
+        // ─────────────────────────────────────────────
+        function isCheckoutUrl(href) {
+          if (!href) return false;
+          return CHECKOUT_PATTERNS.some(function (pattern) {
+            return href.indexOf(pattern) !== -1;
+          });
+        }
+
+        function injectUtmsIntoUrl(href, utms) {
+          if (!Object.keys(utms).length) return href;
+          try {
+            var url = new URL(href, window.location.origin);
+            Object.keys(utms).forEach(function (key) {
+              // Não sobrescreve UTMs que já vieram na URL do checkout
+              if (!url.searchParams.has(key)) {
+                url.searchParams.set(key, utms[key]);
+              }
+            });
+            return url.toString();
+          } catch (e) { return href; }
+        }
+
+        // ─────────────────────────────────────────────
+        // PROPAGAÇÃO EM LINKS <a>
+        // ─────────────────────────────────────────────
+        function appendUtmsToLinks() {
+          var utms = readAttribution(STORAGE_KEY);
+          if (!Object.keys(utms).length) return;
+
+          document.querySelectorAll('a[href]').forEach(function (link) {
+            if (isCheckoutUrl(link.href)) {
+              link.href = injectUtmsIntoUrl(link.href, utms);
+            }
+          });
+        }
+
+        // ─────────────────────────────────────────────
+        // PROPAGAÇÃO EM FORMS (action para checkout)
+        // ─────────────────────────────────────────────
+        function appendUtmsToForms() {
+          var utms = readAttribution(STORAGE_KEY);
+          if (!Object.keys(utms).length) return;
+
+          document.querySelectorAll('form[action]').forEach(function (form) {
+            if (!isCheckoutUrl(form.action)) return;
+
+            Object.keys(utms).forEach(function (key) {
+              // Evita duplicar campos ocultos
+              if (form.querySelector('input[name="' + key + '"]')) return;
+              var input = document.createElement('input');
+              input.type  = 'hidden';
+              input.name  = key;
+              input.value = utms[key];
+              form.appendChild(input);
+            });
+          });
+        }
+
+        // ─────────────────────────────────────────────
+        // INTERCEPTAÇÃO DE CLIQUES (fallback em caso de links dinâmicos)
+        // ─────────────────────────────────────────────
+        function handleClick(e) {
+          var utms = readAttribution(STORAGE_KEY);
+          if (!Object.keys(utms).length) return;
+
+          // Sobe na árvore DOM até encontrar um <a>
+          var el = e.target;
+          while (el && el.tagName !== 'A') { el = el.parentElement; }
+          if (!el || !el.href) return;
+
+          if (isCheckoutUrl(el.href)) {
+            var newHref = injectUtmsIntoUrl(el.href, utms);
+            if (newHref !== el.href) {
+              el.href = newHref;
+            }
+          }
+        }
+
+        // ─────────────────────────────────────────────
+        // OBSERVER: monitora novos elementos adicionados ao DOM
+        // ─────────────────────────────────────────────
+        function startObserver() {
+          if (!window.MutationObserver || !document.body) return;
+
+          var observer = new MutationObserver(function (mutations) {
+            var shouldProcess = mutations.some(function (m) { return m.addedNodes.length > 0; });
+            if (shouldProcess) {
+              appendUtmsToLinks();
+              appendUtmsToForms();
+            }
+          });
+
+          observer.observe(document.body, { childList: true, subtree: true });
+        }
+
+        // ─────────────────────────────────────────────
+        // INIT
+        // ─────────────────────────────────────────────
+        function init() {
+          appendUtmsToLinks();
+          appendUtmsToForms();
+          startObserver();
+          document.addEventListener('click', handleClick, true); // captura na fase de captura
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', init);
+        } else {
+          init();
+        }
+
+      })();
+    </script>
+
+    <!-- Meta Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '978168861374527');
+      fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=978168861374527&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
     <!-- Primary Meta Tags -->
     <title>OrbitSender - Automação Grupos de WhatsApp para Afiliados | Entrega Garantida</title>
     <meta name="title" content="OrbitSender - Automação Grupos de WhatsApp para Afiliados | Entrega Garantida" />
